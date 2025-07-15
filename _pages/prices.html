@@ -9,6 +9,12 @@ author_profile: true
 
 
 {% for post in site.prices %}
-  {% include archive-single.html %}
+  <div class="price-item">
+    <h2>{{ post.title }}</h2>
+    <div class="excerpt">{{ post.excerpt }}</div>
+    <div class="content">
+      {{ post.content }}
+    </div>
+    <hr>
+  </div>
 {% endfor %}
-
