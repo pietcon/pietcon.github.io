@@ -220,7 +220,7 @@ collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  publications:
+  prices:
     output: true
     permalink: /:collection/:path/
   portfolio:
@@ -269,15 +269,15 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
+  # _portfolio -> trocado para prices
   - scope:
       path: ""
-      type: portfolio
+      type: prices
     values:
       layout: single
       author_profile: true
       share: true
-      comment: true
+      comments: true
   # _talks
   - scope:
       path: ""
