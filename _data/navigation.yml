@@ -15,8 +15,8 @@ main:
   - title: "Teaching"
     url: /teaching/    
     
-  - title: "Prices"
-    url: /prices/
+  - title: "Analyses Prices"
+    url: /analyses_prices/
 
   - title: "Talks"
     url: /talks/ 

@@ -226,7 +226,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  talks:
+  analyses_prices:
     output: true
     permalink: /:collection/:path/
 
@@ -278,10 +278,10 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _talks
+  # _talks -: trocado para analyses_prices
   - scope:
       path: ""
-      type: talks
+      type: analyses_prices
     values:
       layout: talk
       author_profile: true
