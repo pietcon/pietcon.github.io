@@ -18,9 +18,9 @@ main:
   - title: "Analyses Prices"
     url: /analyses_prices/
 
-  - title: "Talks"
-    url: /talks/ 
-    
+  - title: "Prices"
+    url: /prices/
+
   - title: "Blog Posts"
     url: /year-archive/
     
