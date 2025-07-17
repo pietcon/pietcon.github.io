@@ -1,0 +1,9 @@
+
+
+CODIGO PARA TRANSFORMAR ipynb EM html
+
+python -m nbconvert regressoes/notebook.ipynb `
+  --to html `
+  --output notebook.html `
+  --output-dir analyses_prices `
+  --no-input

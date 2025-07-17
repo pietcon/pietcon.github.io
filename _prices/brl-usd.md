@@ -4,4 +4,4 @@ excerpt: "Interactive chart of the BRL/USD exchange rate with historical data fr
 collection: prices
 ---
 
-<iframe src="{{ '/assets/charts/brl_usd.html' | relative_url }}" width="100%" height="500" frameborder="0"></iframe>
+<iframe src="{{ '/assets/charts/brl_usd.html' | relative_url }}" width="800" height="500" frameborder="0"></iframe>
