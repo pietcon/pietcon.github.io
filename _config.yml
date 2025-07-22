@@ -226,7 +226,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  analyses_prices:
+  price_analyses:
     output: true
     permalink: /:collection/:path/
   macro:
@@ -285,9 +285,9 @@ defaults:
   # _talks -: trocado para analyses_prices
   - scope:
       path: ""
-      type: analyses_prices
+      type: price_analyses
     values:
-      layout: talk
+      layout: single
       author_profile: true
       share: true
 # _macro

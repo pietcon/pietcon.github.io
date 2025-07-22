@@ -1,0 +1,12 @@
+---
+layout: archive
+title: "Price Analyses"
+permalink: /price-analyses/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.price_analyses reversed %}
+  {% include archive-single.html %}
+{% endfor %}

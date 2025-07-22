@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_excel("regressoes/CDX_US_HY_spread_simple_analysis_legend_formatado.xlsx")
+df = pd.read_excel("regressoes/cdx_us_hy/excel/out/CDX_US_HY_spread_simple_analysis_legend_formatado.xlsx")
 
 # ================================
 # Definição das cores-base para escala de 3 tons
@@ -149,7 +149,7 @@ html.append('</body>')
 html.append('</html>')
 
 # Salva em arquivo
-with open("assets/table/CDX_US_HY.html", "w", encoding="utf-8") as f:
+with open("regressoes/cdx_us_hy/html/CDX_US_HY.html", "w", encoding="utf-8") as f:
     f.write("\n".join(html))
 
-print("✅ HTML com colunas ocultáveis gerado em assets/table/CDX_US_HY.html")
+print("✅ HTML com colunas ocultáveis gerado em regressoes/cdx_us_hy/html/CDX_US_HY.html")

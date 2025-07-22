@@ -11,18 +11,17 @@ main:
   - title: "Research"
     url: /publications/
    
-
   - title: "Teaching"
-    url: /teaching/    
-    
-  - title: "Analyses Prices"
-    url: /analyses_prices/
+    url: /teaching/
 
   - title: "Prices"
-    url: /prices/
+    url: /prices/    
 
-  - title: "Macro Analysis"
-    url: /macro-analysis/
+  - title: "Price Analyses"
+    url: /price-analyses/
+
+  - title: "Macro Analyses"
+    url: /macro-analyses/
 
   # - title: "Blog Posts"
   #   url: /year-archive/

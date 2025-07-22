@@ -1,12 +1,12 @@
 import pandas as pd
 from xlsxwriter.utility import xl_col_to_name
 
-df = pd.read_excel("regressoes/CDX_US_HY_spread_simple_analysis_legend.xlsx")
+df = pd.read_excel("regressoes/cdx_us_hy/excel/out/CDX_US_HY_spread_simple_analysis_legend.xlsx")
 
 # Colunas que receberão formatação condicional
 cols_to_fmt = ["mean", "std", "pval_ADR", "pval_Coint", "R2", "coef", "pval"]
 
-with pd.ExcelWriter("regressoes/CDX_US_HY_spread_simple_analysis_legend_formatado.xlsx", engine="xlsxwriter") as writer:
+with pd.ExcelWriter("regressoes/cdx_us_hy/excel/out/CDX_US_HY_spread_simple_analysis_legend_formatado.xlsx", engine="xlsxwriter") as writer:
     
     # Escreve todo o DataFrame na planilha “Dados” (sem o índice pandas)
     df.to_excel(writer, index=False, sheet_name="Dados")
@@ -73,7 +73,7 @@ with pd.ExcelWriter("regressoes/CDX_US_HY_spread_simple_analysis_legend_formatad
             #   - crie fmt_bg = wb.add_format({"bg_color":"#FFCCCC"})
             #   - use "format": fmt_bg
 
-print("Gerado: regressoes/CDX_US_HY_spread_simple_analysis_legend_formatado.xlsx")
+print("Gerado: regressoes/cdx_us_hy/excel/out/CDX_US_HY_spread_simple_analysis_legend_formatado.xlsx")
 
     # (Opcional) Exemplo de ajuste de largura de coluna
     # for i, width in enumerate([12, 10, 8, 15, 8, 8, 8, 8]):  # personalize as larguras

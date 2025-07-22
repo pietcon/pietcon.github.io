@@ -32,7 +32,7 @@ lag_lead_spam = [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
 # df = pd.read_excel(p_data + 'out\\out_DB_M.xlsx', index_col=0)
 # ###########
 
-df = pd.read_excel('regressoes/out_DB_M.xlsx', index_col=0)           #LINHA ADICIONADA
+df = pd.read_excel('regressoes/cdx_us_hy/excel/in/out_DB_M.xlsx', index_col=0)           #LINHA ADICIONADA
 
 init_date = pd.DataFrame()
 for el in df:
@@ -128,20 +128,12 @@ for el in df:
 
 
 
-############TRECHO MUDADO
+###########TRECHO MUDADO
 # Salvando na mesma pasta do script
-pd.concat([init_date, output], axis=1).to_excel('regressoes/' + main_var + '_simple_analysis.xlsx')
+pd.concat([init_date, output], axis=1).to_excel('regressoes/cdx_us_hy/excel/out/' + main_var + '_simple_analysis.xlsx')
 output_ll = pd.concat([output_ll_pval, output_ll_coef, output_ll_r2], axis=1)
-output_ll.to_excel('regressoes/' + main_var + '_lead_lag_analysis.xlsx')
+output_ll.to_excel('regressoes/cdx_us_hy/excel/out/' + main_var + '_lead_lag_analysis.xlsx')
 ########ATÉ AQUI
-
-
-
-
-
-
-
-
 
 
 ######## UNIT ROOT TESTS
