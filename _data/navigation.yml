@@ -21,8 +21,11 @@ main:
   - title: "Prices"
     url: /prices/
 
-  - title: "Blog Posts"
-    url: /year-archive/
+  - title: "Macro Analysis"
+    url: /macro-analysis/
+
+  # - title: "Blog Posts"
+  #   url: /year-archive/
     
   #- title: "CV"
   #  url: /cv/
