@@ -10,11 +10,6 @@ from datetime import datetime as dt
 from p_functions import reg_box_jenkins, table_stats
 from sklearn.linear_model import LinearRegression
 
-####MUDANCA
-
-path_scripts = os.path.join('regressoes', 'cdx_us_hy', 'scripts')
-sys.path.append(path_scripts)
-
 path_excel_in = os.path.join('regressoes', 'cdx_us_hy', 'excel', 'in')
 path_excel_out = os.path.join('regressoes', 'cdx_us_hy', 'excel', 'out')
 path_scripts = os.path.join('regressoes', 'cdx_us_hy', 'scripts')
@@ -24,8 +19,6 @@ sys.path.append(path_scripts)
 # Arquivos de entrada
 file_data = os.path.join(path_excel_in, 'out_DB_M.xlsx')
 file_specs = os.path.join(path_excel_in, 'specs_fixed.xlsx')
-####MUDANCA
-
 
 # Filter or ignore the warning
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -290,7 +283,7 @@ for rv in reg_versions:
 
     pd.DataFrame.from_dict(out_y).to_excel(os.path.join(path_vint, 'sectors_actual.xlsx'))
     X.to_excel(os.path.join(path_vint, 'varsX_actual.xlsx'))
-    out_sum = table_stats(pd.DataFrame.from_dict(out_stats), df_cods=dff_cods) 
+    out_sum = table_stats(pd.DataFrame.from_dict(out_stats))#, df_cods=dff_cods) 
     out_sum.to_excel(os.path.join(path_vint, 'sectors_regs_summary.xlsx'))
 
     # Saving Final Output

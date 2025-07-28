@@ -44,6 +44,14 @@ df_total = df_total.drop_duplicates(subset="data").sort_values("data")
 df_total.to_csv(csv_path, index=False)
 print(f"CSV salvo em {csv_path} com {len(df_total)} linhas.")
 
+def hex8_to_rgba(hex_color):
+    hex_color = hex_color.lstrip("#")
+    r, g, b = int(hex_color[0:2], 16), int(hex_color[2:4], 16), int(hex_color[4:6], 16)
+    a = round(int(hex_color[6:8], 16) / 255, 2)
+    return f"rgba({r}, {g}, {b}, {a})"
+
+line = hex8_to_rgba("#2fcc2fd8")
+marker = hex8_to_rgba("#2fcc2f80")
 # === Criar gráfico interativo ===
 fig = go.Figure()
 fig.add_trace(go.Scatter(
@@ -51,8 +59,8 @@ fig.add_trace(go.Scatter(
     y=df_total['valor'].values,
     mode='lines+markers',
     name='BRL/USD',
-    line=dict(color='green'),
-    marker=dict(size=6),
+    line=dict(color=line),
+    marker=dict(size=2, color=marker),
     hovertemplate='<b>Data:</b> %{x|%d/%m/%Y}<br><b>Valor:</b> US$ %{y:.4f}<extra></extra>',
 ))
 
