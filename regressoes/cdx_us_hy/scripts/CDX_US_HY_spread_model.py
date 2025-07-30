@@ -1,43 +1,65 @@
 import os, sys, warnings, re
 import pandas as pd
 from datetime import datetime as dt
-# roots = ['T:\\ECONOMIA\\Estrategia\\']
-# for p_root in roots:
-#     if os.path.exists(p_root):
-#         break
-# p_codes = p_root + 'codes\\'
-# sys.path.append(p_codes + 'generic\\')
 from p_functions import reg_box_jenkins, table_stats
 from sklearn.linear_model import LinearRegression
+import logging
 
-path_excel_in = os.path.join('regressoes', 'cdx_us_hy', 'excel', 'in')
+# ──────────────────────────────
+# 1. Logging básico (console + arquivo)
+# ──────────────────────────────
+logging.basicConfig(
+    level=logging.INFO,  # DEBUG para rastrear variável a variável
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[
+        logging.StreamHandler(sys.stdout),               # console
+        logging.FileHandler("run.log", mode="w", encoding="utf-8")
+    ]
+)
+log = logging.getLogger(__name__)
+
+
+# ──────────────────────────────
+# 2. Paths do projeto
+# ──────────────────────────────
+path_excel_in  = os.path.join('regressoes', 'cdx_us_hy', 'excel', 'in')
 path_excel_out = os.path.join('regressoes', 'cdx_us_hy', 'excel', 'out')
-path_scripts = os.path.join('regressoes', 'cdx_us_hy', 'scripts')
-
+path_scripts   = os.path.join('regressoes', 'cdx_us_hy', 'scripts')
 sys.path.append(path_scripts)
 
-# Arquivos de entrada
-file_data = os.path.join(path_excel_in, 'out_DB_M.xlsx')
-file_specs = os.path.join(path_excel_in, 'specs_fixed.xlsx')
+base_dir       = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+path_data_base = os.path.join(base_dir, 'excel', 'in')
 
-# Filter or ignore the warning
+file_data_m   = os.path.join(path_data_base, 'out_DB_M.xlsx')    # mensal
+file_data_d   = os.path.join(path_data_base, 'out_DB_D.xlsx')    # diário
+file_legendas = os.path.join(path_data_base, 'legendas.xlsx')    # legendas
+
+# ────────────log───────────────
+for f in (file_data_m, file_data_d, file_legendas):
+    if not os.path.exists(f):
+        log.critical("Arquivo %s não encontrado", f)
+        sys.exit(1)
+# ──────────────────────────────        
+        
+# ──────────────────────────────
+# 3. Warnings & pandas opts
+# ──────────────────────────────
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=RuntimeWarning)
-# Set options
 pd.set_option('mode.chained_assignment', None)
 
 start_load = dt.now()
 
-##############################
-##############################
-#### ESPECIFICACOES GERAIS
-folder = os.path.join('Credit', 'HY')
-region = 'US'
+# ──────────────────────────────
+# 4. Parâmetros gerais
+# ──────────────────────────────
+folder   = os.path.join('Credit', 'HY')
+region   = 'US'
 path_out = os.path.join(path_excel_out, region, folder)
 
-index = 'CDX_US_HY_spread'
+index          = 'CDX_US_HY_spread'
 last_datapoint = '2023-11-01'
-plan_version = index + '_cockpit'
 
 #### PARÂMETROS
 main_setup = True
@@ -49,42 +71,30 @@ daily_model = False
 vint_robust_test = 3
 reccursive_reg = True; plot_Xs = True
 d_intercept = True; adjust_first_datapoint = False
-#################################
-#################################
-#################################
 
-#path_out = p_root + 'Modelos\\' + region + folder
-
+# ──────────────────────────────
+# 5. Carregamento de dados
+# ──────────────────────────────
 if daily_model:
     first_datapoint = '2007-01-01'
-    reccursive_length = 3000; step_oos = 30
-    sheet = 'IN_D'
+    reccursive_length = 3000
+    step_oos = 30
+    df = pd.read_excel(file_data_d, index_col=0)  # Dados diários
 else:
     first_datapoint = '2001-11-01'
-    reccursive_length = 160; step_oos = 1
-    sheet = 'IN_M'
+    reccursive_length = 160
+    step_oos = 1
+    df = pd.read_excel(file_data_m, index_col=0)  # Dados mensais
+    
+df_daily = pd.read_excel(file_data_d, index_col=0)  # sempre
 
-###########
-# Data
-# IN: DF horizontal, Vars Y e X empilhadas
-
-file_plan = os.path.join(path_out, f'{plan_version}.xlsx')
-
-df = pd.read_excel(file_plan, sheet_name=sheet, index_col=0)
-
-df_daily = pd.read_excel(file_plan, sheet_name='IN_D', index_col=0)
-dff_cods = pd.read_excel(file_plan, sheet_name='CAD', usecols=['Codes', 'Names']).dropna()
+dff_cods = pd.read_excel(file_legendas, usecols=['Codes', 'Names']).dropna()
+dff_cods.columns = ['cod', 'name_paste']
 
 keep_cols = [x for x in df.columns if x != 0]
 df = df[keep_cols]
 df_daily = df_daily[keep_cols]
-###########
 
-###########
-# Uploading names
-# IN: DF horizontal, cols: [cod, name_paste]
-dff_cods.columns = ['cod','name_paste']
-###########
 
 ###########
 # Adjusting paths
@@ -108,10 +118,9 @@ secs = int(load_time.total_seconds() % 60)
 delta_time = f'{mins} min {secs} sec'
 print('Load Time: ', delta_time)
 
-#########################
-#########################
-#########################
-### RUN VARIABLE SELECTION
+# ──────────────────────────────
+# 6. Loop de versões
+# ──────────────────────────────
 for rv in reg_versions:
     path_vint = os.path.join(path_out, f't_{rv}')
     path_recc = os.path.join(path_vint, 'reccursive')
@@ -147,7 +156,7 @@ for rv in reg_versions:
 
     ##################
     ##################
-    if adjust_first_datapoint:   first_datapoint = years[rv] + '-01-01'
+    #if adjust_first_datapoint:   first_datapoint = years[rv] + '-01-01'
     ##################
     ##################
 
