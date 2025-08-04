@@ -1,0 +1,10 @@
+.teste-page #main {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.teste-page .page {
+  @include span(12 of 12);     // usa 100% da largura da grid
+  @include prefix(0);
+  @include suffix(0);
+}
