@@ -27,7 +27,7 @@ df = pd.read_excel(path_in + 'out_DB_M.xlsx', index_col=0)
 
 init_date = pd.DataFrame()
 for el in df:
-    init_date.loc[el, 'series (m/y)'] = str(df[el].dropna().index[0].month) + '/' + str(df[el].dropna().index[0].year)
+    init_date.loc[el, 'series start (m/y)'] = str(df[el].dropna().index[0].month) + '/' + str(df[el].dropna().index[0].year)
 
 df = df[(df.index >= first_datapoint) & (df.index <= last_datapoint)]
 #df.drop(columns=['intercept'], inplace=True)
@@ -57,7 +57,7 @@ for el in df:
         y = y[y.index <= X.index[-1]]
     
     #### UNIVARIATE ANALYSIS
-    output.loc[el, 'start (m/y)'] = str(X.index[0].month) + '/' + str(X.index[0].year)
+    output.loc[el, 'sample start (m/y)'] = str(X.index[0].month) + '/' + str(X.index[0].year)
     output.loc[el, 'last (m/y)'] = str(X.index[-1].month) + '/' + str(X.index[-1].year)
     output.loc[el, 'mean'] = round(X.mean(), n_digits)
     output.loc[el, 'std'] = round(X.std(), n_digits)
