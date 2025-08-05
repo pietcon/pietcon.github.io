@@ -19,21 +19,20 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-
 # ──────────────────────────────
 # 2. Paths do projeto
 # ──────────────────────────────
-path_excel_in  = os.path.join('regressoes', 'cdx_us_hy', 'excel', 'in')
-path_excel_out = os.path.join('regressoes', 'cdx_us_hy', 'excel', 'out')
-path_scripts   = os.path.join('regressoes', 'cdx_us_hy', 'scripts')
-sys.path.append(path_scripts)
+path_in        = os.path.join('regressoes', '0inputs')
+path_out       = os.path.join('regressoes', 'cdx_us_hy', 'outputs')
+#path_scripts   = os.path.join('regressoes', 'cdx_us_hy', 'scripts')
+#sys.path.append(path_scripts)
 
-base_dir       = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-path_data_base = os.path.join(base_dir, 'excel', 'in')
+#base_dir       = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#path_data_base = os.path.join(base_dir, 'excel', 'in')
 
-file_data_m   = os.path.join(path_data_base, 'out_DB_M.xlsx')    # mensal
-file_data_d   = os.path.join(path_data_base, 'out_DB_D.xlsx')    # diário
-file_legendas = os.path.join(path_data_base, 'legendas.xlsx')    # legendas
+file_data_m   = os.path.join(path_in, 'out_DB_M.xlsx')    # mensal
+file_data_d   = os.path.join(path_in, 'out_DB_D.xlsx')    # diário
+file_legendas = os.path.join(path_in, 'legendas.xlsx')    # legendas
 
 # ────────────log───────────────
 for f in (file_data_m, file_data_d, file_legendas):
@@ -54,10 +53,6 @@ start_load = dt.now()
 # ──────────────────────────────
 # 4. Parâmetros gerais
 # ──────────────────────────────
-folder   = os.path.join('Credit', 'HY')
-region   = 'US'
-path_out = os.path.join(path_excel_out, region, folder)
-
 index          = 'CDX_US_HY_spread'
 last_datapoint = '2023-11-01'
 

@@ -3,21 +3,14 @@ import os
 import pandas as pd
 import statsmodels.api as sm
 
-# #### Settings
-# project = 'GlobalPrices'
-# dir_path = os.getcwd().split(project)[0]                        
-# p_root = dir_path + project + '//'
-# if not os.path.isdir(p_root): os.makedirs(p_root)
-
-# p_data = p_root + 'data\\'
-# p_out = p_root + 'analysis\\'
-
-##############################
-##############################
-#### GLOBAL PARAMETERS
-main_var = 'CDX_US_HY_spread'
+# ──────────────────────────────
+# 1. Global parameters
+# ──────────────────────────────
+main_var        = 'CDX_US_HY_spread'
 first_datapoint = '2001-11-01'
-last_datapoint = '2023-09-01'
+last_datapoint  = '2023-09-01'
+path_in         = os.path.join('regressoes', '0inputs')
+path_out        = os.path.join('regressoes', 'cdx_us_hy', 'outputs')
 
 #### OUTROS
 stats_UR_threshold = 0.15
@@ -29,10 +22,8 @@ lag_lead_spam = [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
 # ###########
 # # Data
 # # IN: DF horizontal, Vars Y e X empilhadas
-# df = pd.read_excel(p_data + 'out\\out_DB_M.xlsx', index_col=0)
-# ###########
-
-df = pd.read_excel('regressoes/cdx_us_hy/excel/in/out_DB_M.xlsx', index_col=0)           #LINHA ADICIONADA
+df = pd.read_excel(path_in + 'out_DB_M.xlsx', index_col=0)           
+#LINHA ADICIONADA
 
 init_date = pd.DataFrame()
 for el in df:
@@ -122,18 +113,10 @@ for el in df:
             output_ll_pval.loc[el, 'pval_' + suffix] = round(reg.pvalues[0], n_digits)
             output_ll_r2.loc[el, 'R2_' + suffix] = round(reg.rsquared, n_digits)
 
-# pd.concat([init_date, output], axis=1).to_excel(p_data + main_var + '_simple_analysis.xlsx')
-# output_ll = pd.concat([output_ll_pval, output_ll_coef, output_ll_r2], axis=1)
-# output_ll.to_excel(p_out + main_var + '_lead_lag_analysis.xlsx') 
 
-
-
-###########TRECHO MUDADO
-# Salvando na mesma pasta do script
-pd.concat([init_date, output], axis=1).to_excel('regressoes/cdx_us_hy/excel/out/' + main_var + '_simple_analysis.xlsx')
+pd.concat([init_date, output], axis=1).to_excel(path_out + main_var + '_simple_analysis.xlsx')
 output_ll = pd.concat([output_ll_pval, output_ll_coef, output_ll_r2], axis=1)
-output_ll.to_excel('regressoes/cdx_us_hy/excel/out/' + main_var + '_lead_lag_analysis.xlsx')
-########ATÉ AQUI
+output_ll.to_excel(path_out + main_var + '_lead_lag_analysis.xlsx')
 
 
 ######## UNIT ROOT TESTS
@@ -156,18 +139,3 @@ output_ll.to_excel('regressoes/cdx_us_hy/excel/out/' + main_var + '_lead_lag_ana
 # Variables in y0 and y1 are assumed to be integrated of order 1, I(1).
 # This uses the augmented Engle-Granger two-step cointegration test. 
 # Constant or trend is included in 1st stage regression, i.e. in cointegrating equation.
-
-
-
-
-###########
-# Data #\US_credit_model_3 #BBG_CDX_US_credit_model, OUT_prog_M
-# IN: DF horizontal, Vars Y e X empilhadas
-#df = pd.read_excel(p_data + 'Scenarios\\' + region + '\\' + plan_version + '.xlsx', 
-#                   sheet_name='5y5yBE', index_col=0).iloc[:,5:8].dropna()
-#                   
-#df.set_index(df.columns[0], inplace=True)
-#df.columns = ['BBG','GS']                 
-#df['intercept'] = 1
-
-#reg = LinearRegression(fit_intercept=False).fit(X=df[['GS', 'intercept']], y=df[['BBG']])
