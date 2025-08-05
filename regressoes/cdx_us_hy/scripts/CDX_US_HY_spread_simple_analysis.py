@@ -9,8 +9,8 @@ import statsmodels.api as sm
 main_var        = 'CDX_US_HY_spread'
 first_datapoint = '2001-11-01'
 last_datapoint  = '2023-09-01'
-path_in         = os.path.join('regressoes', '0inputs')
-path_out        = os.path.join('regressoes', 'cdx_us_hy', 'outputs')
+path_in         = os.path.join('regressoes', '0inputs/')
+path_out        = os.path.join('regressoes', 'cdx_us_hy', 'outputs/')
 
 #### OUTROS
 stats_UR_threshold = 0.15
@@ -23,7 +23,6 @@ lag_lead_spam = [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
 # # Data
 # # IN: DF horizontal, Vars Y e X empilhadas
 df = pd.read_excel(path_in + 'out_DB_M.xlsx', index_col=0)           
-#LINHA ADICIONADA
 
 init_date = pd.DataFrame()
 for el in df:

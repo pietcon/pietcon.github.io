@@ -22,8 +22,8 @@ log = logging.getLogger(__name__)
 # ──────────────────────────────
 # 2. Paths do projeto
 # ──────────────────────────────
-path_in        = os.path.join('regressoes', '0inputs')
-path_out       = os.path.join('regressoes', 'cdx_us_hy', 'outputs')
+path_in        = os.path.join('regressoes', '0inputs\\')
+path_out       = os.path.join('regressoes', 'cdx_us_hy', 'outputs\\')
 #path_scripts   = os.path.join('regressoes', 'cdx_us_hy', 'scripts')
 #sys.path.append(path_scripts)
 
@@ -132,7 +132,7 @@ for rv in reg_versions:
     # ! just copy the last fixed_specs into the new folder 
     # ! and run the model again with this specification
     
-    file_specs = os.path.join(path_vint, 'specs_fixed.xlsx')
+    file_specs = os.path.join('regressoes', 'cdx_us_hy', 'specs_fixed.xlsx')
     print("🔍 Procurando arquivo em:", file_specs)
 
     if os.path.exists(file_specs):

@@ -1,0 +1,33 @@
+
+=================================================================
+                      OLS Regression Results                     
+-----------------------------------------------------------------
+=================================================================
+   Dep. Variable: CDX_US_HY_spread   R-squared:             0.800
+           Model:              OLS   Adj. R-squared:        0.797
+          Method:    Least Squares   F-statistic:           258.6
+            Date: Tue, 05 Aug 2025   Prob (F-statistic): 3.73e-89
+            Time:         16:14:29   Log-Likelihood:       885.53
+No. Observations:              264   AIC:                  -1761.
+    Df Residuals:              259   BIC:                  -1743.
+        Df Model:                4                               
+ Covariance Type:        nonrobust                               
+-----------------------------------------------------------------
+==================================================================================================================================
+                         coef   std err         t  P>|t|    [0.025    0.975]    move global_pmi_comp_ZS  jpm_vol     vix intercept
+              move     0.0108     0.005     2.232  0.026     0.001     0.020     NaN                NaN      NaN     NaN       NaN
+global_pmi_comp_ZS    -0.3836     0.065    -5.926  0.000    -0.511    -0.256     NaN                NaN      NaN     NaN       NaN
+           jpm_vol     4.1886     0.336    12.459  0.000     3.527     4.851     NaN                NaN      NaN     NaN       NaN
+               vix     0.4240     0.116     3.658  0.000     0.196     0.652     NaN                NaN      NaN     NaN       NaN
+         intercept    -0.0112     0.002    -4.565  0.000    -0.016    -0.006     NaN                NaN      NaN     NaN       NaN
+               NaN        NaN       NaN       NaN    NaN       NaN       NaN  0.0108            -0.3836   4.1886   0.424   -0.0112
+               NaN        NaN       NaN       NaN    NaN       NaN       NaN   0.005              0.065    0.336   0.116     0.002
+               NaN        NaN       NaN       NaN    NaN       NaN       NaN (2.158)           (-5.902) (12.466) (3.655)  (-5.579)
+               NaN        NaN       NaN       NaN    NaN       NaN       NaN   0.032                0.0      0.0     0.0       0.0
+----------------------------------------------------------------------------------------------------------------------------------
+=====================================================
+      Omnibus: 97.474   Durbin-Watson:          0.425
+Prob(Omnibus):  0.000   Jarque-Bera (JB):     591.728
+         Skew:  1.341   Prob(JB):           3.22e-129
+     Kurtosis:  9.826   Cond. No.                761.
+-----------------------------------------------------
