@@ -1,0 +1,4 @@
+CODIGO PARA TRANSFORMAR ipynb EM html
+
+python -m nbconvert regressoes/cdx_us_hy/scripts/regression_cdx_us_hy.ipynb --to html --output CDX_US_HY.html --output-dir regressoes/cdx_us_hy/html --no-input
+

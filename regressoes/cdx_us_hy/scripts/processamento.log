@@ -1,0 +1,316 @@
+2025-07-30 14:22:22,027 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 14:36:53,015 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 14:36:53,059 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 14:36:53,060 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 14:36:53,082 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 14:36:53,085 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 14:36:53,085 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 14:36:53,089 - INFO - 189 c贸digos preenchidos com nomes correspondentes.
+2025-07-30 14:37:08,539 - INFO - Tentando carregar o arquivo: ..\excel\out\CDX_US_HY_spread_simple_analysis_legend_formatado.xlsx
+2025-07-30 14:37:08,579 - INFO - Arquivo carregado com sucesso: ..\excel\out\CDX_US_HY_spread_simple_analysis_legend_formatado.xlsx
+2025-07-30 14:37:24,966 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 14:37:24,979 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 14:37:25,023 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 14:37:25,024 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 14:37:25,085 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 14:37:25,087 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 14:37:25,089 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 14:37:25,092 - INFO - 189 c贸digos preenchidos com nomes correspondentes.
+2025-07-30 14:37:44,465 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-07-30 14:41:27,788 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 14:41:27,806 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 14:41:27,845 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 14:41:27,846 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 14:41:27,876 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 14:41:27,877 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 14:41:27,879 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 14:41:27,883 - INFO - 189 c贸digos preenchidos com nomes correspondentes.
+2025-07-30 14:46:25,429 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 14:46:26,727 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 14:46:27,031 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 14:46:27,032 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 14:46:27,059 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 14:46:27,062 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 14:46:27,063 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 14:46:27,066 - INFO - 189 c贸digos preenchidos com nomes correspondentes.
+2025-07-30 15:32:56,740 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 15:32:56,759 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 15:32:57,039 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 15:32:57,039 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 15:32:57,054 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 15:32:57,057 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:32:57,059 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:32:57,061 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:34:30,729 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 15:34:31,244 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 15:34:31,435 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 15:34:31,435 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 15:34:31,453 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 15:34:31,457 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:34:31,459 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:34:31,465 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:34:42,341 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-07-30 15:34:42,371 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-07-30 15:34:42,373 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:34:42,377 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:34:42,379 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:34:53,181 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 15:34:53,191 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 15:34:53,214 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 15:34:53,214 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 15:34:53,232 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 15:34:53,233 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:34:53,234 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:34:53,236 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:34:53,325 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-07-30 15:34:53,338 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-07-30 15:34:53,339 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:34:53,342 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:34:53,344 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:35:06,017 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 15:35:06,033 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 15:35:06,312 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 15:35:06,313 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 15:35:06,330 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 15:35:06,331 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:35:06,331 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:35:06,338 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:35:07,178 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-07-30 15:35:07,195 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-07-30 15:35:07,196 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:35:07,198 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:35:07,199 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:40:04,779 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 15:40:04,798 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 15:40:04,945 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 15:40:04,946 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 15:40:04,961 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 15:40:04,962 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:40:04,962 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:40:04,964 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:40:05,531 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-07-30 15:40:05,539 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-07-30 15:40:05,541 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:40:05,545 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:40:05,547 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:43:11,096 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 15:43:11,106 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 15:43:11,130 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 15:43:11,130 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 15:43:11,147 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 15:43:11,148 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:43:11,148 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:43:11,150 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 15:43:11,245 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-07-30 15:43:11,255 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-07-30 15:43:11,256 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 15:43:11,258 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 15:43:11,259 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 16:44:48,288 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 16:44:48,300 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 16:44:48,332 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 16:44:48,332 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 16:44:48,348 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 16:44:48,349 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 16:44:48,350 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 16:44:48,352 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 16:44:48,497 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-07-30 16:44:48,508 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-07-30 16:44:48,509 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 16:44:48,511 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 16:44:48,512 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 16:45:01,205 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-07-30 16:59:22,977 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-30 16:59:22,994 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-30 16:59:23,217 - INFO - Arquivo principal carregado com sucesso.
+2025-07-30 16:59:23,218 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-30 16:59:23,233 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-30 16:59:23,234 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 16:59:23,235 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 16:59:23,237 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-30 16:59:23,831 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-07-30 16:59:23,846 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-07-30 16:59:23,849 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-30 16:59:23,857 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-30 16:59:23,860 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-07-31 15:35:28,365 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-07-31 15:35:28,397 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-07-31 15:35:28,680 - INFO - Arquivo principal carregado com sucesso.
+2025-07-31 15:35:28,680 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-07-31 15:35:28,716 - INFO - Arquivo de legendas carregado com sucesso.
+2025-07-31 15:35:28,719 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-31 15:35:28,721 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-31 15:35:28,722 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-07-31 15:35:30,874 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-07-31 15:35:30,909 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-07-31 15:35:30,912 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-07-31 15:35:30,917 - INFO - Mapa de legendas criado com 255 entradas.
+2025-07-31 15:35:30,918 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-07-31 15:35:43,268 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-07-31 15:54:59,085 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:08:47,692 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:08:47,705 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:08:47,944 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:08:47,944 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:08:47,970 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:08:47,972 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:08:47,973 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:08:47,975 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:08:48,124 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:08:49,664 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:08:49,686 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:08:49,688 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:08:49,691 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:08:49,691 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:09:01,724 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:16:46,687 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:16:46,697 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:16:46,721 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:16:46,722 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:16:46,740 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:16:46,742 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:16:46,743 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:16:46,749 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:16:46,819 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:16:47,026 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:16:47,034 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:16:47,035 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:16:47,036 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:16:47,037 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:16:58,931 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:18:21,113 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:18:21,121 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:18:21,156 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:18:21,157 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:18:21,176 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:18:21,177 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:18:21,177 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:18:21,179 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:18:21,223 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:18:21,386 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:18:21,395 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:18:21,396 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:18:21,397 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:18:21,398 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:18:33,096 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:18:37,775 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:18:37,789 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:18:37,844 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:18:37,845 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:18:37,862 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:18:37,862 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:18:37,863 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:18:37,865 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:18:38,023 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:18:38,199 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:18:38,207 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:18:38,208 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:18:38,209 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:18:38,210 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:18:50,086 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:18:54,482 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:18:54,491 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:18:54,658 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:18:54,658 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:18:54,675 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:18:54,675 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:18:54,676 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:18:54,677 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:18:54,741 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:18:55,339 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:18:55,349 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:18:55,350 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:18:55,351 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:18:55,352 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:19:07,250 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:20:09,339 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:20:09,366 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:20:09,396 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:20:09,397 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:20:09,417 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:20:09,419 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:20:09,420 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:20:09,424 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:20:09,471 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:20:09,634 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:20:09,643 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:20:09,644 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:20:09,646 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:20:09,647 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:20:21,609 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:21:45,539 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:21:45,557 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:21:45,617 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:21:45,618 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:21:45,635 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:21:45,636 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:21:45,637 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:21:45,638 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:21:45,679 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:21:45,839 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:21:45,848 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:21:45,849 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:21:45,851 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:21:45,852 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:21:57,930 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:28:17,500 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:28:17,515 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:28:17,541 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:28:17,542 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:28:17,564 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:28:17,567 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:28:17,569 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:28:17,572 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:28:17,634 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:28:17,751 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:28:17,759 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:28:17,760 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:28:17,762 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:28:17,763 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:28:30,190 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:44:59,869 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:44:59,881 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:44:59,959 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:44:59,960 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:44:59,991 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:44:59,992 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:44:59,993 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:44:59,995 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:45:00,063 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:45:00,177 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:45:00,187 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:45:00,188 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:45:00,189 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:45:00,190 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:45:12,154 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:48:42,830 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:48:42,840 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:48:42,867 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:48:42,868 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:48:42,892 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:48:42,893 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:48:42,894 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:48:42,896 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:48:42,939 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:48:43,061 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:48:43,069 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:48:43,070 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:48:43,071 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:48:43,072 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:48:55,014 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-03 21:54:34,763 - INFO - Warnings do tipo FutureWarning ignorados.
+2025-08-03 21:54:34,776 - INFO - Lendo arquivo principal: ..\excel\out\CDX_US_HY_spread_simple_analysis.xlsx
+2025-08-03 21:54:34,809 - INFO - Arquivo principal carregado com sucesso.
+2025-08-03 21:54:34,810 - INFO - Lendo arquivo de legendas: ..\excel\in\legendas.xlsx
+2025-08-03 21:54:34,860 - INFO - Arquivo de legendas carregado com sucesso.
+2025-08-03 21:54:34,861 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:54:34,862 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:54:34,865 - INFO - 189 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:54:34,907 - INFO - Exportando DataFrame 'regression' com a coluna 'Signal' para o caminho: ../excel/out/regression_with_signal.xlsx
+2025-08-03 21:54:35,064 - INFO - Lendo arquivo regs_summary: ..\excel\out\US\Credit\HY\t_0\sectors_regs_summary.xlsx
+2025-08-03 21:54:35,073 - INFO - Arquivo regs_summary carregado com sucesso.
+2025-08-03 21:54:35,074 - INFO - Coluna 'Codes' renomeada e 'Names' inserida.
+2025-08-03 21:54:35,078 - INFO - Mapa de legendas criado com 255 entradas.
+2025-08-03 21:54:35,079 - INFO - 12 c骴igos preenchidos com nomes correspondentes.
+2025-08-03 21:54:46,727 - INFO - Arquivo lido com sucesso: d:\assistente_pesquisa\pietcon.github.io\regressoes\cdx_us_hy\excel\in\out_DB_D.xlsx
+2025-08-04 09:44:13,152 - INFO - Warnings do tipo FutureWarning ignorados.

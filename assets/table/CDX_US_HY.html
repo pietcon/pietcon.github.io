@@ -1,0 +1,3364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CDX_US_HY Table</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+  <style>
+    .table-cond { width:90%; max-width:1400px; margin:30px auto; border-collapse:collapse; font-family:Open Sans,sans-serif; font-size:0.95rem; text-align:center; background:#fff }
+    .table-cond th, .table-cond td { border:1px solid rgba(0,0,0,0.1); padding:8px 12px; white-space:nowrap }
+    .table-cond thead th { background:rgba(0,0,0,0.04); font-weight:600 }
+    .table-cond tbody tr:nth-child(even) { background:rgba(0,0,0,0.02) }
+    .table-cond tbody tr:hover { background:rgba(0,0,0,0.05) }
+    .col-toggle { margin:20px auto; text-align:center }
+    .col-toggle label { margin-right:10px; font-size:0.9rem }
+  </style>
+  <script>
+    function toggleColumn(idx) {
+      const table = document.querySelector(".table-cond");
+      table.querySelectorAll("tr").forEach(tr => {
+        const cell = tr.children[idx];
+        if (!cell) return;
+        cell.style.display = cell.style.display === "none" ? "table-cell" : "none";
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="col-toggle">
+    <label><input type="checkbox" checked onchange="toggleColumn(0)"> Codes</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(1)"> Names</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(2)"> series (m/y)</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(3)"> start (m/y)</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(4)"> last (m/y)</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(5)"> mean</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(6)"> std</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(7)"> pval_ADR</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(8)"> ADF - UR at15.0%</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(9)"> pval_Coint</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(10)"> Cointegration to Y at15.0%</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(11)"> R2</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(12)"> coef</label>
+    <label><input type="checkbox" checked onchange="toggleColumn(13)"> pval</label>
+  </div>
+  <table class="table-cond">
+    <thead><tr><th>Codes</th><th>Names</th><th>series (m/y)</th><th>start (m/y)</th><th>last (m/y)</th><th>mean</th><th>std</th><th>pval_ADR</th><th>ADF - UR at15.0%</th><th>pval_Coint</th><th>Cointegration to Y at15.0%</th><th>R2</th><th>coef</th><th>pval</th></tr></thead>
+    <tbody>
+      <tr>
+        <td style="">2y_nom_ger</td>
+        <td style="">2y Note Germany (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.011</td>
+        <td style="background:#f8736d;">0.0165</td>
+        <td style="">0.494</td>
+        <td style="">yes UR</td>
+        <td style="">0.2373</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8716c;">0.0283</td>
+        <td style="background:#fa9874;">0.1934</td>
+        <td style="color:red;">0.0063</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_fra</td>
+        <td style="">2y Note France (%)</td>
+        <td style="">8/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.012</td>
+        <td style="background:#f8736d;">0.0163</td>
+        <td style="">0.557</td>
+        <td style="">yes UR</td>
+        <td style="">0.2288</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8746d;">0.0391</td>
+        <td style="background:#fa9974;">0.2309</td>
+        <td style="color:red;">0.0013</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_net</td>
+        <td style="">2y Note Netherlands (%)</td>
+        <td style="">5/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0113</td>
+        <td style="background:#f8736d;">0.0165</td>
+        <td style="">0.385</td>
+        <td style="">yes UR</td>
+        <td style="">0.2327</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8746d;">0.0389</td>
+        <td style="background:#fa9974;">0.227</td>
+        <td style="color:red;">0.0013</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_ita</td>
+        <td style="">2y Note Italy (%)</td>
+        <td style="">11/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786d;">0.0179</td>
+        <td style="background:#f8726c;">0.0154</td>
+        <td style="">0.423</td>
+        <td style="">yes UR</td>
+        <td style="">0.2169</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98770;">0.1</td>
+        <td style="background:#fa9e75;">0.3894</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_spa</td>
+        <td style="">2y Note Spain (%)</td>
+        <td style="">5/1993</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0168</td>
+        <td style="background:#f8736d;">0.0163</td>
+        <td style="">0.319</td>
+        <td style="">yes UR</td>
+        <td style="">0.1942</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f9826f;">0.0831</td>
+        <td style="background:#fa9c74;">0.3365</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_por</td>
+        <td style="">2y Note Portugal (%)</td>
+        <td style="">5/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0239</td>
+        <td style="background:#f97c6e;">0.0292</td>
+        <td style="">0.199</td>
+        <td style="">yes UR</td>
+        <td style="">0.2246</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f9826f;">0.0858</td>
+        <td style="background:#fa9874;">0.1906</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_eur_weig_all</td>
+        <td style="">2y Nom Europe All weighted Agg (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0136</td>
+        <td style="background:#f8736c;">0.0158</td>
+        <td style="">0.535</td>
+        <td style="">yes UR</td>
+        <td style="">0.2197</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f87a6e;">0.0566</td>
+        <td style="background:#fa9b74;">0.2866</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_spread_weig_eur_ger_all</td>
+        <td style="">2y Nom Europe Spread All Weighted Agg (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0026</td>
+        <td style="background:#f86a6b;">0.0036</td>
+        <td style="">0.122</td>
+        <td style="">no UR</td>
+        <td style="">0.254</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f97f6f;">0.0751</td>
+        <td style="background:#fcbd7b;">1.4454</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_spread_eur_ger</td>
+        <td style="">2y Nom Europe Simple Spread All Agg (%)</td>
+        <td style="">5/1993</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0046</td>
+        <td style="background:#f86c6b;">0.0061</td>
+        <td style="">0.219</td>
+        <td style="">yes UR</td>
+        <td style="">0.2451</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f97b6e;">0.0623</td>
+        <td style="background:#fba977;">0.783</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_ger</td>
+        <td style="">5y Note Germany (%)</td>
+        <td style="">8/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.015</td>
+        <td style="background:#f8736d;">0.0171</td>
+        <td style="">0.45</td>
+        <td style="">yes UR</td>
+        <td style="">0.2151</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8796e;">0.0548</td>
+        <td style="background:#fa9a74;">0.2603</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_fra</td>
+        <td style="">5y Note France (%)</td>
+        <td style="">8/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0171</td>
+        <td style="background:#f8736d;">0.0164</td>
+        <td style="">0.409</td>
+        <td style="">yes UR</td>
+        <td style="">0.2034</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f9816f;">0.0813</td>
+        <td style="background:#fa9c74;">0.3292</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_net</td>
+        <td style="">5y Note Netherlands (%)</td>
+        <td style="">5/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.016</td>
+        <td style="background:#f8736d;">0.017</td>
+        <td style="">0.499</td>
+        <td style="">yes UR</td>
+        <td style="">0.2052</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f9806f;">0.0788</td>
+        <td style="background:#fa9c74;">0.3131</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_ita</td>
+        <td style="">5y Note Italy (%)</td>
+        <td style="">11/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0255</td>
+        <td style="background:#f8726c;">0.0151</td>
+        <td style="">0.279</td>
+        <td style="">yes UR</td>
+        <td style="">0.2023</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa9573;">0.1461</td>
+        <td style="background:#fba175;">0.4799</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_spa</td>
+        <td style="">5y Note Spain (%)</td>
+        <td style="">4/1993</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0232</td>
+        <td style="background:#f8736d;">0.017</td>
+        <td style="">0.497</td>
+        <td style="">yes UR</td>
+        <td style="">0.1746</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa8e72;">0.125</td>
+        <td style="background:#fa9e75;">0.3962</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_por</td>
+        <td style="">5y Note Portugal (%)</td>
+        <td style="">5/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f87b6e;">0.0319</td>
+        <td style="background:#f97c6e;">0.0295</td>
+        <td style="">0.249</td>
+        <td style="">yes UR</td>
+        <td style="">0.2285</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98570;">0.0962</td>
+        <td style="background:#fa9874;">0.2001</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_eur_weig_all</td>
+        <td style="">5y Nom Europe All weighted Agg (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786d;">0.019</td>
+        <td style="background:#f8736c;">0.0159</td>
+        <td style="">0.481</td>
+        <td style="">yes UR</td>
+        <td style="">0.1937</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98670;">0.099</td>
+        <td style="background:#fa9e75;">0.3751</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_spread_weig_eur_ger_all</td>
+        <td style="">5y Nom Europe Spread All Weighted Agg (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.004</td>
+        <td style="background:#f86b6b;">0.0045</td>
+        <td style="">0.25</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0489</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8796e;">0.0543</td>
+        <td style="background:#fbaf78;">0.986</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_spread_eur_ger</td>
+        <td style="">5y Nom Europe Simple Spread All Agg (%)</td>
+        <td style="">4/1993</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.007</td>
+        <td style="background:#f86d6b;">0.0076</td>
+        <td style="">0.228</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0466</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8756d;">0.0412</td>
+        <td style="background:#fba175;">0.5084</td>
+        <td style="color:red;">0.0009</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_ger</td>
+        <td style="">10y Note Germany (%)</td>
+        <td style="">8/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786e;">0.0205</td>
+        <td style="background:#f8736d;">0.0169</td>
+        <td style="">0.393</td>
+        <td style="">yes UR</td>
+        <td style="">0.1906</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f9806f;">0.0774</td>
+        <td style="background:#fa9c74;">0.3128</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_fra</td>
+        <td style="">10y Note France (%)</td>
+        <td style="">8/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0237</td>
+        <td style="background:#f8736c;">0.0159</td>
+        <td style="">0.439</td>
+        <td style="">yes UR</td>
+        <td style="">0.1754</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98a71;">0.1124</td>
+        <td style="background:#fa9e75;">0.4005</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_net</td>
+        <td style="">10y Note Netherlands (%)</td>
+        <td style="">5/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786e;">0.0223</td>
+        <td style="background:#f8736d;">0.0167</td>
+        <td style="">0.323</td>
+        <td style="">yes UR</td>
+        <td style="">0.1766</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98a71;">0.1119</td>
+        <td style="background:#fa9e75;">0.3795</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_ita</td>
+        <td style="">10y Note Italy (%)</td>
+        <td style="">11/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f87b6e;">0.0337</td>
+        <td style="background:#f8716c;">0.014</td>
+        <td style="">0.411</td>
+        <td style="">yes UR</td>
+        <td style="">0.1811</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa9b74;">0.1662</td>
+        <td style="background:#fba376;">0.5524</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_spa</td>
+        <td style="">10y Note Spain (%)</td>
+        <td style="">4/1993</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f87a6e;">0.0308</td>
+        <td style="background:#f8736d;">0.0163</td>
+        <td style="">0.568</td>
+        <td style="">yes UR</td>
+        <td style="">0.1727</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa9373;">0.1408</td>
+        <td style="background:#fa9f75;">0.4369</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_por</td>
+        <td style="">10y Note Portugal (%)</td>
+        <td style="">5/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f97c6e;">0.0385</td>
+        <td style="background:#f8796e;">0.0244</td>
+        <td style="">0.185</td>
+        <td style="">yes UR</td>
+        <td style="">0.2318</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98871;">0.1057</td>
+        <td style="background:#fa9a74;">0.2532</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_eur_weig_all</td>
+        <td style="">10y Nom Europe All weighted Agg (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0256</td>
+        <td style="background:#f8726c;">0.0155</td>
+        <td style="">0.347</td>
+        <td style="">yes UR</td>
+        <td style="">0.168</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa8e72;">0.1242</td>
+        <td style="background:#fa9f75;">0.4322</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_spread_weig_eur_ger_all</td>
+        <td style="">10y Nom Europe Spread All Weighted Agg (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0052</td>
+        <td style="background:#f86b6b;">0.0044</td>
+        <td style="">0.333</td>
+        <td style="">yes UR</td>
+        <td style="">0.0511</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8736c;">0.0336</td>
+        <td style="background:#fbaa77;">0.7957</td>
+        <td style="color:red;">0.0029</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_spread_eur_ger</td>
+        <td style="">10y Nom Europe Simple Spread All Agg (%)</td>
+        <td style="">4/1993</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.009</td>
+        <td style="background:#f86d6b;">0.0076</td>
+        <td style="">0.405</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0472</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86f6c;">0.0206</td>
+        <td style="background:#fa9d75;">0.3585</td>
+        <td style="color:red;">0.0202</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_us</td>
+        <td style="">2y Note US (%)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0176</td>
+        <td style="background:#f8726c;">0.0145</td>
+        <td style="">0.185</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0357</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8746d;">0.0377</td>
+        <td style="background:#f98b71;">-0.2541</td>
+        <td style="color:red;">0.0016</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_us</td>
+        <td style="">5y Note US (%)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0236</td>
+        <td style="background:#f8706c;">0.0124</td>
+        <td style="">0.31</td>
+        <td style="">yes UR</td>
+        <td style="">0.0554</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86d6b;">0.0135</td>
+        <td style="background:#f98d72;">-0.1781</td>
+        <td style="">0.0602</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_us</td>
+        <td style="">10y Note US (%)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f87a6e;">0.0297</td>
+        <td style="background:#f86f6c;">0.0112</td>
+        <td style="">0.29</td>
+        <td style="">yes UR</td>
+        <td style="">0.0626</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8696b;">0.0003</td>
+        <td style="background:#fa9373;">0.027</td>
+        <td style="">0.7974</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_jp</td>
+        <td style="">3y JGB (%)</td>
+        <td style="">1/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0033</td>
+        <td style="background:#f86b6b;">0.0044</td>
+        <td style="">0.508</td>
+        <td style="">yes UR</td>
+        <td style="">0.2256</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f87a6e;">0.0588</td>
+        <td style="background:#fbb179;">1.0579</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_jp</td>
+        <td style="">5y JGB (%)</td>
+        <td style="">1/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0033</td>
+        <td style="background:#f86b6b;">0.0044</td>
+        <td style="">0.508</td>
+        <td style="">yes UR</td>
+        <td style="">0.2256</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f87a6e;">0.0588</td>
+        <td style="background:#fbb179;">1.0579</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_jp</td>
+        <td style="">10y JGB (%)</td>
+        <td style="">4/1989</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0077</td>
+        <td style="background:#f86c6b;">0.0062</td>
+        <td style="">0.575</td>
+        <td style="">yes UR</td>
+        <td style="">0.1846</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f9816f;">0.081</td>
+        <td style="background:#fbac77;">0.8662</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">2y_nom_spread_ger_us</td>
+        <td style="">2y Nom Spread GE-US (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0066</td>
+        <td style="background:#f8706c;">0.0124</td>
+        <td style="">0.198</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0012</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fba777;">0.209</td>
+        <td style="background:#f97e6f;">-0.7023</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">5y_nom_spread_ger_us</td>
+        <td style="">5y Nom Spread GE-US (%)</td>
+        <td style="">8/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0086</td>
+        <td style="background:#f86f6c;">0.0106</td>
+        <td style="">0.457</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0015</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fcba7a;">0.2704</td>
+        <td style="background:#f8776d;">-0.9356</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">10y_nom_spread_ger_us</td>
+        <td style="">10y Nom Spread GE-US (%)</td>
+        <td style="">8/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0092</td>
+        <td style="background:#f86e6b;">0.0086</td>
+        <td style="">0.545</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0044</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fcbe7b;">0.2851</td>
+        <td style="background:#f8706c;">-1.1854</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ted_spread_eur</td>
+        <td style="">Ted Spread Europe (%)</td>
+        <td style="">11/2002</td>
+        <td style="">11/2002</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0037</td>
+        <td style="background:#f86a6b;">0.0038</td>
+        <td style="color:red;">0.048</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0049</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fee983;">0.4281</td>
+        <td style="background:#f4e883;">3.2954</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ted_spread_us</td>
+        <td style="">Ted Spread US (%)</td>
+        <td style="">12/1984</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0037</td>
+        <td style="background:#f86a6b;">0.0037</td>
+        <td style="">0.098</td>
+        <td style="">no UR</td>
+        <td style="">0.1272</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fcb97a;">0.2672</td>
+        <td style="background:#fee081;">2.6403</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">incl_2y10y_us</td>
+        <td style="">10y-2y Spread US (%)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0122</td>
+        <td style="background:#f86e6c;">0.0093</td>
+        <td style="">0.158</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0146</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98871;">0.1052</td>
+        <td style="background:#fba676;">0.6604</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">incl_2y10y_ger</td>
+        <td style="">10y-2y Spread Germany (%)</td>
+        <td style="">9/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0096</td>
+        <td style="background:#f86c6b;">0.0062</td>
+        <td style="">0.314</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0479</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98770;">0.1001</td>
+        <td style="background:#fbaf78;">0.9665</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">3m_real_exante</td>
+        <td style=""></td>
+        <td style="">6/1983</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8726c;">-0.0076</td>
+        <td style="background:#f8716c;">0.0142</td>
+        <td style="">0.117</td>
+        <td style="">no UR</td>
+        <td style="">0.2301</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86f6c;">0.0215</td>
+        <td style="background:#f98d71;">-0.1965</td>
+        <td style="color:red;">0.0174</td>
+      </tr>
+      <tr>
+        <td style="">5y5y_be_us</td>
+        <td style="">5Y5Y TIPS BE (%)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0228</td>
+        <td style="background:#f86a6b;">0.0033</td>
+        <td style="color:red;">0.046</td>
+        <td style="">no UR</td>
+        <td style="">0.2658</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0029</td>
+        <td style="background:#fa9c74;">0.3083</td>
+        <td style="">0.3844</td>
+      </tr>
+      <tr>
+        <td style="">fed_funds</td>
+        <td style="">Fed Funds (%)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0141</td>
+        <td style="background:#f8736c;">0.016</td>
+        <td style="">0.155</td>
+        <td style="">yes UR</td>
+        <td style="">0.2692</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8776d;">0.0485</td>
+        <td style="background:#f98b71;">-0.2622</td>
+        <td style="color:red;">0.0003</td>
+      </tr>
+      <tr>
+        <td style="">3m_nom_us</td>
+        <td style="">3m Bill US (%)</td>
+        <td style="">6/1983</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0134</td>
+        <td style="background:#f8726c;">0.0157</td>
+        <td style="">0.059</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0331</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8796e;">0.0561</td>
+        <td style="background:#f98a71;">-0.2874</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">3m3m_nom_us</td>
+        <td style="">3m3m Forward</td>
+        <td style="">1/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0157</td>
+        <td style="background:#f8736c;">0.0162</td>
+        <td style="">0.064</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0297</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8746d;">0.0398</td>
+        <td style="background:#f98c71;">-0.2333</td>
+        <td style="color:red;">0.0012</td>
+      </tr>
+      <tr>
+        <td style="">6m_nom_us</td>
+        <td style="">6m Bill US (%)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0146</td>
+        <td style="background:#f8736c;">0.016</td>
+        <td style="color:red;">0.036</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0311</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8776d;">0.0477</td>
+        <td style="background:#f98b71;">-0.2592</td>
+        <td style="color:red;">0.0004</td>
+      </tr>
+      <tr>
+        <td style="">1y_nom_us</td>
+        <td style="">1y Bill US (%)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0167</td>
+        <td style="background:#f8726c;">0.0148</td>
+        <td style="">0.44</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0354</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86e6c;">0.0194</td>
+        <td style="background:#f98d72;">-0.1786</td>
+        <td style="color:red;">0.0243</td>
+      </tr>
+      <tr>
+        <td style="">10y_real_us</td>
+        <td style="">10y TIPS (%)</td>
+        <td style="">1/1997</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0094</td>
+        <td style="background:#f86f6c;">0.0107</td>
+        <td style="">0.184</td>
+        <td style="">yes UR</td>
+        <td style="">0.2427</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8736d;">0.0359</td>
+        <td style="background:#fa9c74;">0.335</td>
+        <td style="color:red;">0.0021</td>
+      </tr>
+      <tr>
+        <td style="">10y_real_ger</td>
+        <td style="">10y Real Note Germany (%)</td>
+        <td style="">6/2009</td>
+        <td style="">6/2009</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8736c;">-0.005</td>
+        <td style="background:#f86e6c;">0.0091</td>
+        <td style="">0.23</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0166</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fee582;">0.4116</td>
+        <td style="background:#fbac78;">0.8782</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">usdjpy_1y_hedge_cost</td>
+        <td style="">JPY Hedge Cost 1y (% aa)</td>
+        <td style="">12/1988</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8706c;">-0.0194</td>
+        <td style="background:#f8726c;">0.015</td>
+        <td style="color:red;">0.034</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0264</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8756d;">0.0412</td>
+        <td style="background:#fa9a74;">0.2569</td>
+        <td style="color:red;">0.0009</td>
+      </tr>
+      <tr>
+        <td style="">usdjpy_3m_hedge_cost</td>
+        <td style="">JPY Hedge Cost 3m (% aa)</td>
+        <td style="">12/1988</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8706c;">-0.0178</td>
+        <td style="background:#f8736c;">0.0158</td>
+        <td style="">0.06</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.031</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8746d;">0.0377</td>
+        <td style="background:#fa9974;">0.2333</td>
+        <td style="color:red;">0.0016</td>
+      </tr>
+      <tr>
+        <td style="">usdeur_1y_hedge_cost</td>
+        <td style="">EUR Hedge Cost 1y (% aa)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8726c;">-0.0074</td>
+        <td style="background:#f8706c;">0.0127</td>
+        <td style="">0.111</td>
+        <td style="">no UR</td>
+        <td style="">0.0806</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9373;">0.1421</td>
+        <td style="background:#fba376;">0.5636</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">usdeur_3m_hedge_cost</td>
+        <td style="">EUR Hedge Cost 3m (% aa)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8726c;">-0.0068</td>
+        <td style="background:#f8716c;">0.0133</td>
+        <td style="">0.057</td>
+        <td style="">no UR</td>
+        <td style="">0.0888</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9473;">0.1456</td>
+        <td style="background:#fba376;">0.546</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">avg_1y_hedge_cost</td>
+        <td style="">Average Hedge Cost 1y (% aa)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8716c;">-0.0133</td>
+        <td style="background:#f8706c;">0.0119</td>
+        <td style="color:red;">0.019</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0116</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98971;">0.1078</td>
+        <td style="background:#fba276;">0.5224</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">avg_3m_hedge_cost</td>
+        <td style="">Average Hedge Cost 3m (% aa)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8716c;">-0.0123</td>
+        <td style="background:#f8706c;">0.0126</td>
+        <td style="color:red;">0.045</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0181</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98871;">0.1037</td>
+        <td style="background:#fba175;">0.4839</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">jpy5y_dif_1y_cost</td>
+        <td style="">JPY 5y diff (-) Hedge cost 1y</td>
+        <td style="">1/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0016</td>
+        <td style="background:#f86d6b;">0.0078</td>
+        <td style="">0.246</td>
+        <td style="">yes UR</td>
+        <td style="">0.2478</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0029</td>
+        <td style="background:#fa9673;">0.1318</td>
+        <td style="">0.3841</td>
+      </tr>
+      <tr>
+        <td style="">jpy5y_dif_3m_cost</td>
+        <td style="">JPY 5y diff (-) Hedge cost 3m</td>
+        <td style="">1/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0031</td>
+        <td style="background:#f86e6c;">0.0093</td>
+        <td style="">0.146</td>
+        <td style="">no UR</td>
+        <td style="">0.2433</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0022</td>
+        <td style="background:#fa9573;">0.0971</td>
+        <td style="">0.445</td>
+      </tr>
+      <tr>
+        <td style="">eur5y_dif_1y_cost</td>
+        <td style="">EUR 5y diff (-) Hedge cost 1y</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0015</td>
+        <td style="background:#f86b6b;">0.0048</td>
+        <td style="color:red;">0.027</td>
+        <td style="">no UR</td>
+        <td style="">0.0847</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8706c;">0.0252</td>
+        <td style="background:#f9806f;">-0.6246</td>
+        <td style="color:red;">0.01</td>
+      </tr>
+      <tr>
+        <td style="">eur5y_dif_3m_cost</td>
+        <td style="">EUR 5y diff (-) Hedge cost 3m</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0021</td>
+        <td style="background:#f86c6b;">0.0061</td>
+        <td style="color:red;">0.027</td>
+        <td style="">no UR</td>
+        <td style="">0.1384</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86a6b;">0.0062</td>
+        <td style="background:#f98b71;">-0.2439</td>
+        <td style="">0.2033</td>
+      </tr>
+      <tr>
+        <td style="">avg5y_dif_1y_cost</td>
+        <td style="">AVG 5y diff (-) Hedge cost 1y</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0015</td>
+        <td style="background:#f86c6b;">0.006</td>
+        <td style="color:red;">0.041</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0489</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8696b;">0.0008</td>
+        <td style="background:#fa9072;">-0.0912</td>
+        <td style="">0.6429</td>
+      </tr>
+      <tr>
+        <td style="">avg5y_dif_3m_cost</td>
+        <td style="">AVG 5y diff (-) Hedge cost 3m</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0026</td>
+        <td style="background:#f86d6b;">0.0074</td>
+        <td style="">0.085</td>
+        <td style="">no UR</td>
+        <td style="">0.2536</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0</td>
+        <td style="background:#fa9273;">-0.0072</td>
+        <td style="">0.9643</td>
+      </tr>
+      <tr>
+        <td style="">jpy10y_dif_1y_cost</td>
+        <td style="">JPY 10y diff (-) Hedge cost 1y</td>
+        <td style="">4/1989</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0033</td>
+        <td style="background:#f86f6c;">0.0105</td>
+        <td style="">0.154</td>
+        <td style="">yes UR</td>
+        <td style="">0.2108</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86e6b;">0.0169</td>
+        <td style="background:#fa9974;">0.2362</td>
+        <td style="color:red;">0.0355</td>
+      </tr>
+      <tr>
+        <td style="">jpy10y_dif_3m_cost</td>
+        <td style="">JPY 10y diff (-) Hedge cost 3m</td>
+        <td style="">4/1989</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0048</td>
+        <td style="background:#f8706c;">0.0116</td>
+        <td style="">0.413</td>
+        <td style="">yes UR</td>
+        <td style="">0.2201</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86d6b;">0.0142</td>
+        <td style="background:#fa9874;">0.1953</td>
+        <td style="">0.0543</td>
+      </tr>
+      <tr>
+        <td style="">eur10y_dif_1y_cost</td>
+        <td style="">EUR 10y diff (-) Hedge cost 1y</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.002</td>
+        <td style="background:#f86c6b;">0.0066</td>
+        <td style="color:red;">0.004</td>
+        <td style="">no UR</td>
+        <td style="">0.2523</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0006</td>
+        <td style="background:#fa9573;">0.0679</td>
+        <td style="">0.705</td>
+      </tr>
+      <tr>
+        <td style="">eur10y_dif_3m_cost</td>
+        <td style="">EUR 10y diff (-) Hedge cost 3m</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0026</td>
+        <td style="background:#f86d6b;">0.0075</td>
+        <td style="color:red;">0.025</td>
+        <td style="">no UR</td>
+        <td style="">0.237</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86a6b;">0.0034</td>
+        <td style="background:#fa9773;">0.1472</td>
+        <td style="">0.3484</td>
+      </tr>
+      <tr>
+        <td style="">avg10y_dif_1y_cost</td>
+        <td style="">AVG 10y diff (-) Hedge cost 1y</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0027</td>
+        <td style="background:#f86d6b;">0.0081</td>
+        <td style="">0.181</td>
+        <td style="">yes UR</td>
+        <td style="">0.2182</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86b6b;">0.0088</td>
+        <td style="background:#fa9974;">0.2196</td>
+        <td style="">0.1306</td>
+      </tr>
+      <tr>
+        <td style="">avg10y_dif_3m_cost</td>
+        <td style="">AVG 10y diff (-) Hedge cost 3m</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0037</td>
+        <td style="background:#f86e6c;">0.0091</td>
+        <td style="">0.074</td>
+        <td style="">no UR</td>
+        <td style="">0.2212</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86b6b;">0.0099</td>
+        <td style="background:#fa9974;">0.2077</td>
+        <td style="">0.1073</td>
+      </tr>
+      <tr>
+        <td style="">CDX_US_IG_spread</td>
+        <td style="">CDX IG US Index</td>
+        <td style="">4/2003</td>
+        <td style="">4/2003</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0077</td>
+        <td style="background:#f86a6b;">0.0033</td>
+        <td style="">0.057</td>
+        <td style="">no UR</td>
+        <td style=""></td>
+        <td style=""></td>
+        <td style=""></td>
+        <td style=""></td>
+        <td style=""></td>
+      </tr>
+      <tr>
+        <td style="">CDX_US_HY_spread</td>
+        <td style="">CDX HY US Index</td>
+        <td style="">11/2001</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f97d6e;">0.0446</td>
+        <td style="background:#f8756d;">0.019</td>
+        <td style="color:red;">0.043</td>
+        <td style="">no UR</td>
+        <td style=""></td>
+        <td style=""></td>
+        <td style=""></td>
+        <td style=""></td>
+        <td style=""></td>
+      </tr>
+      <tr>
+        <td style="">CDX_EZ_IG_spread</td>
+        <td style="">CDX IG BBG</td>
+        <td style="">4/2002</td>
+        <td style="">4/2002</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0076</td>
+        <td style="background:#f86a6b;">0.0036</td>
+        <td style="">0.051</td>
+        <td style="">no UR</td>
+        <td style="">0.4961</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#cedd81;">0.5646</td>
+        <td style="background:#dce182;">3.9819</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">CDX_EZ_HY_spread</td>
+        <td style="">CDX HY BBG</td>
+        <td style="">11/2003</td>
+        <td style="">11/2003</td>
+        <td style="">8/2023</td>
+        <td style="background:#f97c6e;">0.0373</td>
+        <td style="background:#f8726c;">0.0157</td>
+        <td style="color:red;">0.025</td>
+        <td style="">no UR</td>
+        <td style="">0.3027</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#63be7b;">0.8629</td>
+        <td style="background:#fcb479;">1.1606</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">vix</td>
+        <td style="">VIX SPX</td>
+        <td style="">1/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786d;">0.0195</td>
+        <td style="background:#f86d6b;">0.0081</td>
+        <td style="color:red;">0.001</td>
+        <td style="">no UR</td>
+        <td style="">0.179</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#c1d980;">0.601</td>
+        <td style="background:#fdc87d;">1.8157</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">v2x</td>
+        <td style="">VIX Eurostoxx</td>
+        <td style="">1/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.023</td>
+        <td style="background:#f86e6c;">0.009</td>
+        <td style="color:red;">0.002</td>
+        <td style="">no UR</td>
+        <td style="">0.1351</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#dee182;">0.5222</td>
+        <td style="background:#fcbf7b;">1.5304</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">move</td>
+        <td style="">MOVE</td>
+        <td style="">4/1988</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#efe683;">0.6162</td>
+        <td style="background:#fdd680;">0.1592</td>
+        <td style="color:red;">0.021</td>
+        <td style="">no UR</td>
+        <td style="">0.0617</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fee883;">0.423</td>
+        <td style="background:#fa9573;">0.0776</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">jpm_vol</td>
+        <td style="">JPM FX Vol</td>
+        <td style="">4/1992</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0096</td>
+        <td style="background:#f8696b;">0.0025</td>
+        <td style="color:red;">0.003</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0059</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#99cd7e;">0.7111</td>
+        <td style="background:#87c87d;">6.4116</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_share_ust_wo_bills</td>
+        <td style="">Fed Share of UST Market w/o Bills (%)</td>
+        <td style="">1/2001</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fa9a74;">0.1786</td>
+        <td style="background:#f98370;">0.0393</td>
+        <td style="">0.333</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0207</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9373;">0.1403</td>
+        <td style="background:#f98d72;">-0.1809</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_share_ust</td>
+        <td style="">Fed Share of UST Market (%)</td>
+        <td style="">1/2001</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fa9974;">0.1738</td>
+        <td style="background:#f9816f;">0.037</td>
+        <td style="">0.12</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0057</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fcc57c;">0.3063</td>
+        <td style="background:#f98a71;">-0.2844</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">liq_ratio</td>
+        <td style="">Ratio: (Fed Excess reserves + Reverse Repos) to (Treasuries and Notes outside the Fed)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fa9c74;">0.19</td>
+        <td style="background:#fcc37c;">0.1318</td>
+        <td style="">0.634</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0469</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8696b;">0.0002</td>
+        <td style="background:#fa9273;">-0.0018</td>
+        <td style="">0.8427</td>
+      </tr>
+      <tr>
+        <td style="">liq_ratio_wo_repo</td>
+        <td style="">Ratio: (Fed Excess reserves) to (Treasuries and Notes outside the Fed)</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fa9773;">0.1624</td>
+        <td style="background:#fcb87a;">0.1152</td>
+        <td style="">0.497</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0463</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8696b;">0.0</td>
+        <td style="background:#fa9373;">0.001</td>
+        <td style="">0.9254</td>
+      </tr>
+      <tr>
+        <td style="">ecb_qe_rt</td>
+        <td style="">Ratio to GDP: ECB Securities of Euro Residents Denominated in Euro Balance</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f98670;">0.0861</td>
+        <td style="background:#fcb579;">0.1119</td>
+        <td style="">0.911</td>
+        <td style="">yes UR</td>
+        <td style="">0.2359</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f97d6e;">0.0677</td>
+        <td style="background:#fa9172;">-0.0442</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_corp_qe_rt</td>
+        <td style="">Ratio to GDP: ECB Corp Sector Purchase Balance</td>
+        <td style="">1/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0056</td>
+        <td style="background:#f86e6c;">0.0089</td>
+        <td style="">0.861</td>
+        <td style="">yes UR</td>
+        <td style="">0.2458</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8776d;">0.0495</td>
+        <td style="background:#f98570;">-0.4743</td>
+        <td style="color:red;">0.0003</td>
+      </tr>
+      <tr>
+        <td style="">ecb_corp_qe_purch_rt</td>
+        <td style="">Ratio to GDP: ECB Corp Sector Purchase Programme Weekly Purchases</td>
+        <td style="">2/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fa9c74;">0.1866</td>
+        <td style="background:#fcc47c;">0.1335</td>
+        <td style="color:red;">0.023</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0315</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8786d;">0.0505</td>
+        <td style="background:#fa9272;">-0.032</td>
+        <td style="color:red;">0.0002</td>
+      </tr>
+      <tr>
+        <td style="">ecb_corp_qe_redemp_rt</td>
+        <td style="">Ratio to GDP: ECB Corp Sector Purchase Programme Weekly Redemptions</td>
+        <td style="">2/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f86e6c;">-0.0251</td>
+        <td style="background:#f98e72;">0.0547</td>
+        <td style="">0.999</td>
+        <td style="">yes UR</td>
+        <td style="">0.2467</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86d6b;">0.014</td>
+        <td style="background:#fa9473;">0.0411</td>
+        <td style="">0.0556</td>
+      </tr>
+      <tr>
+        <td style="">nom_bal_us_gdp</td>
+        <td style=""></td>
+        <td style="">3/1981</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8696b;">-0.0523</td>
+        <td style="background:#f98370;">0.039</td>
+        <td style="">0.186</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0144</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86c6b;">0.0104</td>
+        <td style="background:#fa9172;">-0.0497</td>
+        <td style="">0.099</td>
+      </tr>
+      <tr>
+        <td style="">prim_bal_us_gdp</td>
+        <td style=""></td>
+        <td style="">12/1984</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f86c6b;">-0.0366</td>
+        <td style="background:#f9826f;">0.0384</td>
+        <td style="">0.142</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0154</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86b6b;">0.0095</td>
+        <td style="background:#fa9172;">-0.0483</td>
+        <td style="">0.1155</td>
+      </tr>
+      <tr>
+        <td style="">global_pmi_comp_ZS</td>
+        <td style="">Global PMI Composite (ZS)</td>
+        <td style="">7/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8736d;">-0.0016</td>
+        <td style="background:#f86f6c;">0.011</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0014</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#feda80;">0.3757</td>
+        <td style="background:#f8746d;">-1.0577</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">global_pmi_manuf_ZS</td>
+        <td style="">Global PMI Manufacturing (ZS)</td>
+        <td style="">1/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0001</td>
+        <td style="background:#f86e6c;">0.0098</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.2034</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f1e783;">0.4697</td>
+        <td style="background:#f86c6b;">-1.3241</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">global_pmi_serv_ZS</td>
+        <td style="">Global PMI Service (ZS)</td>
+        <td style="">7/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8736d;">-0.002</td>
+        <td style="background:#f86f6c;">0.0113</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0011</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fdd27f;">0.3517</td>
+        <td style="background:#f8756d;">-0.9962</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ez_pmi_comp_ZS</td>
+        <td style="">Eurozone Composite PMI SA (ZS)</td>
+        <td style="">1/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8736d;">-0.002</td>
+        <td style="background:#f8706c;">0.0119</td>
+        <td style="color:red;">0.005</td>
+        <td style="">no UR</td>
+        <td style="">0.3441</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fdd57f;">0.3596</td>
+        <td style="background:#f8776d;">-0.9542</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ez_pmi_manuf_ZS</td>
+        <td style="">Eurozone Manufacturing PMI SA (ZS)</td>
+        <td style="">1/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">-0.0003</td>
+        <td style="background:#f86f6c;">0.011</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.3747</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f5e883;">0.4577</td>
+        <td style="background:#f8706c;">-1.1719</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ez_pmi_serv_ZS</td>
+        <td style="">Eurozone Services PMI SA (ZS)</td>
+        <td style="">1/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8736d;">-0.0025</td>
+        <td style="background:#f8716c;">0.0129</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.0569</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fcbd7b;">0.2796</td>
+        <td style="background:#f97c6e;">-0.7815</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ism_manuf_ZS</td>
+        <td style="">ISM Manufacturing (ZS)</td>
+        <td style="">2/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0023</td>
+        <td style="background:#f86d6b;">0.0085</td>
+        <td style="color:red;">0.005</td>
+        <td style="">no UR</td>
+        <td style="">0.0863</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fee582;">0.4139</td>
+        <td style="background:#f8696b;">-1.4373</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ism_serv_ZS</td>
+        <td style="">ISM Service (ZS)</td>
+        <td style="">7/1997</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0009</td>
+        <td style="background:#f86f6c;">0.0111</td>
+        <td style="color:red;">0.008</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0062</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#c5da80;">0.5908</td>
+        <td style="background:#f86c6b;">-1.3167</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">jpm_fri_gdp_us_ZS</td>
+        <td style="">JPMorgan GDP Forecast Revision Index US (ZS)</td>
+        <td style="">1/2002</td>
+        <td style="">1/2002</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8736d;">-0.0033</td>
+        <td style="background:#f8706c;">0.0118</td>
+        <td style="">0.498</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0327</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8696b;">0.0001</td>
+        <td style="background:#fa9272;">-0.0192</td>
+        <td style="">0.8483</td>
+      </tr>
+      <tr>
+        <td style="">jpm_fri_cpi_us_ZS</td>
+        <td style="">JPMorgan CPI Forecast Revision Index US (ZS)</td>
+        <td style="">6/2012</td>
+        <td style="">6/2012</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0074</td>
+        <td style="background:#f8786d;">0.0237</td>
+        <td style="">0.978</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.015</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f9826f;">0.0852</td>
+        <td style="background:#fa9573;">0.0992</td>
+        <td style="color:red;">0.0006</td>
+      </tr>
+      <tr>
+        <td style="">payroll_us_1m</td>
+        <td style="">Payroll (1m %chg)</td>
+        <td style="">3/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0007</td>
+        <td style="background:#f86e6c;">0.0096</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.197</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8726c;">0.0317</td>
+        <td style="background:#f98871;">-0.3516</td>
+        <td style="color:red;">0.0038</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_us_1m</td>
+        <td style="">US Industrial Production SA (1m %chg)</td>
+        <td style="">3/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0003</td>
+        <td style="background:#f8726c;">0.0145</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.0575</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8776d;">0.0474</td>
+        <td style="background:#f98a71;">-0.2853</td>
+        <td style="color:red;">0.0004</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_us_1m</td>
+        <td style="">US Retail Sales SA (1m %chg)</td>
+        <td style="">2/1992</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0033</td>
+        <td style="background:#f8766d;">0.0201</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.2407</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86e6c;">0.0174</td>
+        <td style="background:#fa8f72;">-0.1245</td>
+        <td style="color:red;">0.0326</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_ez_1m</td>
+        <td style="">Eurostat Industrial Production Eurozone SWDA (1m %chg)</td>
+        <td style="">2/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0005</td>
+        <td style="background:#f8786d;">0.0234</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.0595</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8726c;">0.0329</td>
+        <td style="background:#fa8e72;">-0.147</td>
+        <td style="color:red;">0.0032</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_ez_1m</td>
+        <td style="">Eurostat Retail Sales Volume Eurozone SWDA (1m %chg)</td>
+        <td style="">2/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0007</td>
+        <td style="background:#f8746d;">0.0184</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.206</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86a6b;">0.0048</td>
+        <td style="background:#fa9072;">-0.0714</td>
+        <td style="">0.2636</td>
+      </tr>
+      <tr>
+        <td style="">payroll_us_3m</td>
+        <td style="">Payroll (3m %chg)</td>
+        <td style="">7/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0019</td>
+        <td style="background:#f8706c;">0.0127</td>
+        <td style="color:red;">0.002</td>
+        <td style="">no UR</td>
+        <td style="">0.071</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98b71;">0.1138</td>
+        <td style="background:#f98470;">-0.5035</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_us_3m</td>
+        <td style="">US Industrial Production SA (3m %ave chg)</td>
+        <td style="">7/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0008</td>
+        <td style="background:#f8776d;">0.0218</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.1079</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fbad78;">0.227</td>
+        <td style="background:#f98670;">-0.4159</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_us_3m</td>
+        <td style="">US Retail Sales SA (3m %ave chg)</td>
+        <td style="">6/1992</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0103</td>
+        <td style="background:#f8796e;">0.0246</td>
+        <td style="color:red;">0.014</td>
+        <td style="">no UR</td>
+        <td style="">0.0876</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9974;">0.1611</td>
+        <td style="background:#f98971;">-0.3093</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_ez_3m</td>
+        <td style="">Eurostat Industrial Production Eurozone SWDA (3m %ave chg)</td>
+        <td style="">6/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0013</td>
+        <td style="background:#f97d6e;">0.0309</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.1833</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fba576;">0.1993</td>
+        <td style="background:#f98b71;">-0.2748</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_ez_3m</td>
+        <td style="">Eurostat Retail Sales Volume Eurozone SWDA (3m %ave chg)</td>
+        <td style="">6/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.002</td>
+        <td style="background:#f8746d;">0.0179</td>
+        <td style="color:red;">0.004</td>
+        <td style="">no UR</td>
+        <td style="">0.269</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f87b6e;">0.06</td>
+        <td style="background:#f98b71;">-0.26</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">payroll_us_6m</td>
+        <td style="">Payroll (6m %ave chg)</td>
+        <td style="">1/1981</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0036</td>
+        <td style="background:#f8726c;">0.0156</td>
+        <td style="color:red;">0.001</td>
+        <td style="">no UR</td>
+        <td style="">0.1999</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa9473;">0.1431</td>
+        <td style="background:#f98570;">-0.4594</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_us_6m</td>
+        <td style="">US Industrial Production SA (6m %ave chg)</td>
+        <td style="">1/1981</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0013</td>
+        <td style="background:#f97c6e;">0.0293</td>
+        <td style="color:red;">0.004</td>
+        <td style="">no UR</td>
+        <td style="">0.2325</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fdd27f;">0.3511</td>
+        <td style="background:#f98770;">-0.3835</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_us_6m</td>
+        <td style="">US Retail Sales SA (6m %ave chg)</td>
+        <td style="">12/1992</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786e;">0.0205</td>
+        <td style="background:#f97b6e;">0.0285</td>
+        <td style="color:red;">0.005</td>
+        <td style="">no UR</td>
+        <td style="">0.3257</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fed980;">0.3723</td>
+        <td style="background:#f98770;">-0.4066</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_ez_6m</td>
+        <td style="">Eurostat Industrial Production Eurozone SWDA (6m %ave chg)</td>
+        <td style="">12/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0026</td>
+        <td style="background:#f9826f;">0.0385</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.2832</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fdc77d;">0.3143</td>
+        <td style="background:#f98a71;">-0.2769</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_ez_6m</td>
+        <td style="">Eurostat Retail Sales Volume Eurozone SWDA (6m %ave chg)</td>
+        <td style="">12/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0041</td>
+        <td style="background:#f8726c;">0.0153</td>
+        <td style="color:red;">0.004</td>
+        <td style="">no UR</td>
+        <td style="">0.1762</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fba877;">0.2106</td>
+        <td style="background:#f9826f;">-0.5713</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">payroll_us_12m</td>
+        <td style="">Payroll (12m %ave chg)</td>
+        <td style="">1/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0068</td>
+        <td style="background:#f8776d;">0.0216</td>
+        <td style="color:red;">0.007</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0131</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f97c6e;">0.0644</td>
+        <td style="background:#f98c71;">-0.223</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_us_12m</td>
+        <td style="">US Industrial Production SA (12m %ave chg)</td>
+        <td style="">1/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0019</td>
+        <td style="background:#f98570;">0.0426</td>
+        <td style="color:red;">0.001</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0017</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fba276;">0.192</td>
+        <td style="background:#f98d71;">-0.1956</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_us_12m</td>
+        <td style="">US Retail Sales SA (12m %ave chg)</td>
+        <td style="">12/1993</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f97d6e;">0.041</td>
+        <td style="background:#f98470;">0.0411</td>
+        <td style="color:red;">0.006</td>
+        <td style="">no UR</td>
+        <td style="">0.1002</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fba676;">0.2035</td>
+        <td style="background:#f98c71;">-0.2086</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_ez_12m</td>
+        <td style="">Eurostat Industrial Production Eurozone SWDA (12m %ave chg)</td>
+        <td style="">12/1992</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0058</td>
+        <td style="background:#f98971;">0.0481</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="">0.1007</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9573;">0.1464</td>
+        <td style="background:#fa8e72;">-0.1512</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_ez_12m</td>
+        <td style="">Eurostat Retail Sales Volume Eurozone SWDA (12m %ave chg)</td>
+        <td style="">12/2000</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0093</td>
+        <td style="background:#f8746d;">0.0176</td>
+        <td style="">0.224</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0054</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fbaf78;">0.2325</td>
+        <td style="background:#f98370;">-0.5208</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">payroll_us_vol_2y</td>
+        <td style="">Payroll (3m %ave chg, 2y vol)</td>
+        <td style="">6/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0055</td>
+        <td style="background:#f86f6c;">0.0101</td>
+        <td style="">0.068</td>
+        <td style="">no UR</td>
+        <td style="">0.2404</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86a6b;">0.0056</td>
+        <td style="background:#fa8e72;">-0.1406</td>
+        <td style="">0.2276</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_us_vol_2y</td>
+        <td style="">US Industrial Production SA (3m %ave chg, 2y vol)</td>
+        <td style="">6/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0133</td>
+        <td style="background:#f8726c;">0.0145</td>
+        <td style="color:red;">0.035</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0186</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86f6c;">0.022</td>
+        <td style="background:#fa9874;">0.1951</td>
+        <td style="color:red;">0.0162</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_us_vol_2y</td>
+        <td style="">US Retail Sales SA (3m %ave chg, 2y vol)</td>
+        <td style="">5/1994</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0161</td>
+        <td style="background:#f8736d;">0.0164</td>
+        <td style="color:red;">0.028</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0262</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8696b;">0.0026</td>
+        <td style="background:#fa9473;">0.0585</td>
+        <td style="">0.4143</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_ez_vol_2y</td>
+        <td style="">Eurostat Industrial Production Eurozone SWDA (3m %ave chg, 2y vol)</td>
+        <td style="">5/1993</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786d;">0.0193</td>
+        <td style="background:#f8766d;">0.0207</td>
+        <td style="color:red;">0.04</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0205</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86a6b;">0.0055</td>
+        <td style="background:#fa9573;">0.0682</td>
+        <td style="">0.2316</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_ez_vol_2y</td>
+        <td style="">Eurostat Retail Sales Volume Eurozone SWDA (3m %ave chg, 2y vol)</td>
+        <td style="">5/2001</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0098</td>
+        <td style="background:#f8726c;">0.0145</td>
+        <td style="color:red;">0.018</td>
+        <td style="">no UR</td>
+        <td style="">0.2434</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86e6c;">0.0177</td>
+        <td style="background:#f98d72;">-0.1741</td>
+        <td style="color:red;">0.0315</td>
+      </tr>
+      <tr>
+        <td style="">payroll_us_vol_5y</td>
+        <td style="">Payroll (3m %ave chg, 5y vol)</td>
+        <td style="">6/1985</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0065</td>
+        <td style="background:#f86d6b;">0.0075</td>
+        <td style="">0.762</td>
+        <td style="">yes UR</td>
+        <td style="">0.2248</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0005</td>
+        <td style="background:#fa9172;">-0.057</td>
+        <td style="">0.7175</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_us_vol_5y</td>
+        <td style="">US Industrial Production SA (3m %ave chg, 5y vol)</td>
+        <td style="">6/1985</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0156</td>
+        <td style="background:#f86f6c;">0.0104</td>
+        <td style="">0.431</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0185</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8776d;">0.0479</td>
+        <td style="background:#fa9e75;">0.3981</td>
+        <td style="color:red;">0.0004</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_us_vol_5y</td>
+        <td style="">US Retail Sales SA (3m %ave chg, 5y vol)</td>
+        <td style="">5/1997</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0167</td>
+        <td style="background:#f8706c;">0.0119</td>
+        <td style="">0.648</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0221</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86c6b;">0.0121</td>
+        <td style="background:#fa9874;">0.1751</td>
+        <td style="">0.0761</td>
+      </tr>
+      <tr>
+        <td style="">ip_manuf_ez_vol_5y</td>
+        <td style="">Eurostat Industrial Production Eurozone SWDA (3m %ave chg, 5y vol)</td>
+        <td style="">5/1996</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786e;">0.0208</td>
+        <td style="background:#f8726c;">0.0149</td>
+        <td style="">0.674</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0188</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86c6b;">0.0121</td>
+        <td style="background:#fa9773;">0.1401</td>
+        <td style="">0.0757</td>
+      </tr>
+      <tr>
+        <td style="">ret_sal_ez_vol_5y</td>
+        <td style="">Eurostat Retail Sales Volume Eurozone SWDA (3m %ave chg, 5y vol)</td>
+        <td style="">5/2004</td>
+        <td style="">5/2004</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0101</td>
+        <td style="background:#f86f6c;">0.0111</td>
+        <td style="">0.83</td>
+        <td style="">yes UR</td>
+        <td style="">0.2799</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86b6b;">0.0074</td>
+        <td style="background:#fa8e72;">-0.1532</td>
+        <td style="">0.191</td>
+      </tr>
+      <tr>
+        <td style="">cpi_us_trail_2y</td>
+        <td style="">US CPI Urban Consumers (YoY, 2y average)</td>
+        <td style="">1/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#63be7b;">1.1604</td>
+        <td style="background:#88c87d;">0.3302</td>
+        <td style="">0.423</td>
+        <td style="">yes UR</td>
+        <td style="">0.2653</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8716c;">0.0278</td>
+        <td style="background:#fa9373;">0.0096</td>
+        <td style="color:red;">0.0068</td>
+      </tr>
+      <tr>
+        <td style="">cpi_core_us_trail_2y</td>
+        <td style="">US CPI Urban Consumers Less Food & Energy (YoY, 2y average)</td>
+        <td style="">1/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#6ac07b;">1.1329</td>
+        <td style="background:#f7e883;">0.198</td>
+        <td style="">0.83</td>
+        <td style="">yes UR</td>
+        <td style="">0.2349</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0026</td>
+        <td style="background:#fa9373;">0.0049</td>
+        <td style="">0.4125</td>
+      </tr>
+      <tr>
+        <td style="">pce_core_us_trail_2y</td>
+        <td style="">US Core PCE Core Price Index (YoY, 2y average)</td>
+        <td style="">1/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#81c67c;">1.0428</td>
+        <td style="background:#f8e883;">0.1969</td>
+        <td style="color:red;">0.014</td>
+        <td style="">no UR</td>
+        <td style="">0.2467</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0012</td>
+        <td style="background:#fa9373;">0.0034</td>
+        <td style="">0.5732</td>
+      </tr>
+      <tr>
+        <td style="">hcpi_ez_trail_2y</td>
+        <td style="">Euro Area CPI (YoY, 2y average)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#8fca7d;">0.9887</td>
+        <td style="background:#63be7b;">0.3758</td>
+        <td style="">0.235</td>
+        <td style="">yes UR</td>
+        <td style="">0.2646</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f9806f;">0.0784</td>
+        <td style="background:#fa9373;">0.0142</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">hcpi_core_ez_trail_2y</td>
+        <td style="">Euro Area Core CPI (YoY, 2y average)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#9ecf7e;">0.9309</td>
+        <td style="background:#e3e382;">0.2216</td>
+        <td style="">0.752</td>
+        <td style="">yes UR</td>
+        <td style="">0.297</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98b71;">0.1153</td>
+        <td style="background:#fa9373;">0.0291</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">cpi_us_trail_5y</td>
+        <td style="">US CPI Urban Consumers (YoY, 5y average)</td>
+        <td style="">1/1985</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#63be7b;">1.1588</td>
+        <td style="background:#fee983;">0.1862</td>
+        <td style="">0.553</td>
+        <td style="">yes UR</td>
+        <td style="">0.2408</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa9c74;">0.1704</td>
+        <td style="background:#fa9473;">0.0421</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">cpi_core_us_trail_5y</td>
+        <td style="">US CPI Urban Consumers Less Food & Energy (YoY, 5y average)</td>
+        <td style="">1/1985</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#6dc17b;">1.1179</td>
+        <td style="background:#fbaf78;">0.1034</td>
+        <td style="">0.859</td>
+        <td style="">yes UR</td>
+        <td style="">0.2407</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8736d;">0.0362</td>
+        <td style="background:#fa9473;">0.0349</td>
+        <td style="color:red;">0.002</td>
+      </tr>
+      <tr>
+        <td style="">pce_core_us_trail_5y</td>
+        <td style="">US Core PCE Core Price Index (YoY, 5y average)</td>
+        <td style="">1/1985</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#88c87d;">1.0153</td>
+        <td style="background:#fbb279;">0.1067</td>
+        <td style="">0.124</td>
+        <td style="">no UR</td>
+        <td style="">0.2207</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f9816f;">0.0827</td>
+        <td style="background:#fa9473;">0.0512</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">hcpi_ez_trail_5y</td>
+        <td style="">Euro Area CPI (YoY, 5y average)</td>
+        <td style="">12/2001</td>
+        <td style="">12/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#8eca7d;">0.9903</td>
+        <td style="background:#e6e382;">0.2184</td>
+        <td style="">0.459</td>
+        <td style="">yes UR</td>
+        <td style="">0.2578</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa9072;">0.1314</td>
+        <td style="background:#fa9373;">0.0316</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">hcpi_core_ez_trail_5y</td>
+        <td style="">Euro Area Core CPI (YoY, 5y average)</td>
+        <td style="">12/2001</td>
+        <td style="">12/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#a1d07e;">0.9178</td>
+        <td style="background:#fdca7d;">0.1422</td>
+        <td style="">0.463</td>
+        <td style="">yes UR</td>
+        <td style="">0.2592</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa8e72;">0.1233</td>
+        <td style="background:#fa9473;">0.047</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">cpi_us_vol_2y</td>
+        <td style="">US CPI Urban Consumers (YoY, 2y vol)</td>
+        <td style="">1/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#e7e482;">0.6467</td>
+        <td style="background:#b4d57f;">0.2783</td>
+        <td style="">0.193</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0018</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fba175;">0.1889</td>
+        <td style="background:#fa9373;">0.0297</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">cpi_core_us_vol_2y</td>
+        <td style="">US CPI Urban Consumers Less Food & Energy (YoY, 2y vol)</td>
+        <td style="">1/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fcb679;">0.31</td>
+        <td style="background:#eae582;">0.2126</td>
+        <td style="">0.361</td>
+        <td style="">yes UR</td>
+        <td style="">0.2328</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0</td>
+        <td style="background:#fa9373;">-0.0002</td>
+        <td style="">0.9754</td>
+      </tr>
+      <tr>
+        <td style="">pce_core_us_vol_2y</td>
+        <td style="">US Core PCE Core Price Index (YoY, 2y vol)</td>
+        <td style="">1/1982</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fbad78;">0.2692</td>
+        <td style="background:#f9e983;">0.1951</td>
+        <td style="">0.148</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0186</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8716c;">0.0298</td>
+        <td style="background:#fa9373;">0.0168</td>
+        <td style="color:red;">0.0051</td>
+      </tr>
+      <tr>
+        <td style="">hcpi_ez_vol_2y</td>
+        <td style="">Euro Area CPI (YoY, 2y vol)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fedc81;">0.4869</td>
+        <td style="background:#9ace7e;">0.309</td>
+        <td style="color:red;">0.041</td>
+        <td style="">no UR</td>
+        <td style="">0.0834</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f87b6e;">0.0606</td>
+        <td style="background:#fa9373;">0.0151</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">hcpi_core_ez_vol_2y</td>
+        <td style="">Euro Area Core CPI (YoY, 2y vol)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fcb579;">0.3053</td>
+        <td style="background:#e4e382;">0.2206</td>
+        <td style="">0.08</td>
+        <td style="">no UR</td>
+        <td style="">0.185</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86f6c;">0.0232</td>
+        <td style="background:#fa9373;">0.0131</td>
+        <td style="color:red;">0.0137</td>
+      </tr>
+      <tr>
+        <td style="">cpi_us_vol_5y</td>
+        <td style="">US CPI Urban Consumers (YoY, 5y vol)</td>
+        <td style="">1/1985</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#cbdc81;">0.7526</td>
+        <td style="background:#e0e282;">0.2252</td>
+        <td style="">0.427</td>
+        <td style="">yes UR</td>
+        <td style="">0.1437</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f9806f;">0.0777</td>
+        <td style="background:#fa9373;">0.0235</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">cpi_core_us_vol_5y</td>
+        <td style="">US CPI Urban Consumers Less Food & Energy (YoY, 5y vol)</td>
+        <td style="">1/1985</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fcc47c;">0.3759</td>
+        <td style="background:#f9e983;">0.1949</td>
+        <td style="">0.644</td>
+        <td style="">yes UR</td>
+        <td style="">0.234</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0001</td>
+        <td style="background:#fa9373;">-0.0012</td>
+        <td style="">0.846</td>
+      </tr>
+      <tr>
+        <td style="">pce_core_us_vol_5y</td>
+        <td style="">US Core PCE Core Price Index (YoY, 5y vol)</td>
+        <td style="">1/1985</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fcbb7a;">0.3321</td>
+        <td style="background:#fcea83;">0.1917</td>
+        <td style="">0.605</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0196</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86d6b;">0.0149</td>
+        <td style="background:#fa9373;">0.0121</td>
+        <td style="color:red;">0.0482</td>
+      </tr>
+      <tr>
+        <td style="">hcpi_ez_vol_5y</td>
+        <td style="">Euro Area CPI (YoY, 5y vol)</td>
+        <td style="">12/2001</td>
+        <td style="">12/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f4e783;">0.5953</td>
+        <td style="background:#c1d980;">0.2626</td>
+        <td style="">0.589</td>
+        <td style="">yes UR</td>
+        <td style="">0.2039</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86d6b;">0.0149</td>
+        <td style="background:#fa9373;">0.0088</td>
+        <td style="color:red;">0.0492</td>
+      </tr>
+      <tr>
+        <td style="">hcpi_core_ez_vol_5y</td>
+        <td style="">Euro Area Core CPI (YoY, 5y vol)</td>
+        <td style="">12/2001</td>
+        <td style="">12/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fcc57c;">0.378</td>
+        <td style="background:#fee382;">0.1774</td>
+        <td style="">0.524</td>
+        <td style="">yes UR</td>
+        <td style="">0.2578</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86c6b;">0.0128</td>
+        <td style="background:#fa9373;">0.0121</td>
+        <td style="">0.0683</td>
+      </tr>
+      <tr>
+        <td style="">ecb_sloos_cdt_std_3bck_q_ZS</td>
+        <td style=""></td>
+        <td style="">12/2002</td>
+        <td style="">12/2002</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0005</td>
+        <td style="background:#f86e6c;">0.0095</td>
+        <td style="color:red;">0.015</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0203</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#d0dd81;">0.5593</td>
+        <td style="background:#fcbf7b;">1.5128</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_sloos_cdt_std_3frw_q_ZS</td>
+        <td style=""></td>
+        <td style="">12/2002</td>
+        <td style="">12/2002</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0007</td>
+        <td style="background:#f86e6c;">0.0096</td>
+        <td style="color:red;">0.003</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.041</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#ebe582;">0.4851</td>
+        <td style="background:#fcbb7a;">1.3892</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_sloos_cdt_dem_3bck_q_ZS</td>
+        <td style=""></td>
+        <td style="">12/2002</td>
+        <td style="">12/2002</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">-0.0008</td>
+        <td style="background:#f86f6c;">0.0102</td>
+        <td style="color:red;">0.035</td>
+        <td style="">no UR</td>
+        <td style="">0.0862</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fdd680;">0.3646</td>
+        <td style="background:#f8716c;">-1.1317</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_sloos_cdt_dem_3frw_q_ZS</td>
+        <td style=""></td>
+        <td style="">12/2002</td>
+        <td style="">12/2002</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8736d;">-0.001</td>
+        <td style="background:#f86f6c;">0.0101</td>
+        <td style="">0.056</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0222</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fee783;">0.4197</td>
+        <td style="background:#f86e6c;">-1.2323</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_sloos_ci_large_firms_tight_q_ZS</td>
+        <td style=""></td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">-0.0001</td>
+        <td style="background:#f86f6c;">0.0107</td>
+        <td style="color:red;">0.047</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0044</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fdcb7d;">0.3271</td>
+        <td style="background:#fbb078;">1.0191</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_sloos_ci_small_firms_tight_q_ZS</td>
+        <td style=""></td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0007</td>
+        <td style="background:#f8706c;">0.0116</td>
+        <td style="color:red;">0.017</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0034</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fdd17f;">0.3482</td>
+        <td style="background:#fbaf78;">0.97</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">bis_gli_int_claims_all_sec_gdp</td>
+        <td style="">BIS GLI International Claims on all Sectors (% GDP)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fcc57c;">0.38</td>
+        <td style="background:#f98570;">0.0428</td>
+        <td style="">0.462</td>
+        <td style="">yes UR</td>
+        <td style="">0.1595</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98370;">0.0889</td>
+        <td style="background:#fa9673;">0.1323</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">bis_gli_int_claims_bank_sec_gdp</td>
+        <td style="">BIS GLI International Claims on the Bank Sector (% GDP)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fba576;">0.2322</td>
+        <td style="background:#f98870;">0.046</td>
+        <td style="">0.91</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0121</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98d72;">0.1212</td>
+        <td style="background:#fa9773;">0.1439</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">bis_gli_int_claims_non_bank_sec_gdp</td>
+        <td style="">BIS GLI International Claims on the Non-Bank Sectors (% GDP)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fa9a74;">0.1769</td>
+        <td style="background:#f8746d;">0.018</td>
+        <td style="color:red;">0.035</td>
+        <td style="">no UR</td>
+        <td style="">0.2153</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0004</td>
+        <td style="background:#fa9373;">0.0219</td>
+        <td style="">0.7386</td>
+      </tr>
+      <tr>
+        <td style="">bis_gli_cross_border_claims_priv_non_fin_sec_gdp</td>
+        <td style="">BIS GLI Total Claims on Private Non-Financial Sector (% GDP)</td>
+        <td style="">12/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fa9172;">0.1365</td>
+        <td style="background:#f8716c;">0.0137</td>
+        <td style="color:red;">0.029</td>
+        <td style="">no UR</td>
+        <td style="">0.1908</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8756d;">0.0424</td>
+        <td style="background:#fa9b74;">0.2862</td>
+        <td style="color:red;">0.0008</td>
+      </tr>
+      <tr>
+        <td style="">bis_gli_total_claims_priv_non_fin_sec_gdp</td>
+        <td style="">BIS GLI Local Claims on Private Non-Financial Sector (% GDP)</td>
+        <td style="">12/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#dce182;">0.6868</td>
+        <td style="background:#f98871;">0.0469</td>
+        <td style="">0.5</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0169</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86a6b;">0.0053</td>
+        <td style="background:#fa9272;">-0.0294</td>
+        <td style="">0.2415</td>
+      </tr>
+      <tr>
+        <td style="">bis_gli_local_claims_priv_non_fin_sec_gdp</td>
+        <td style="">BIS GLI Cross-Border Claims on Private Non-Financial Sector (% GDP)</td>
+        <td style="">12/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f0e683;">0.6103</td>
+        <td style="background:#f98871;">0.0472</td>
+        <td style="">0.562</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0191</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86c6b;">0.0132</td>
+        <td style="background:#fa9172;">-0.0462</td>
+        <td style="">0.0637</td>
+      </tr>
+      <tr>
+        <td style="">bis_gli_us_claims_priv_non_fin_sec_gdp</td>
+        <td style="">BIS GLI Claims on US Private Non-Financial Sector (% GDP)</td>
+        <td style="">12/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fee382;">0.5169</td>
+        <td style="background:#f87a6e;">0.0268</td>
+        <td style="">0.167</td>
+        <td style="">yes UR</td>
+        <td style="">0.1221</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98570;">0.096</td>
+        <td style="background:#fa9974;">0.2197</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">bis_gli_ez_claims_priv_non_fin_sec_gdp</td>
+        <td style="">BIS GLI Claims on EZ Private Non-Financial Sector (% GDP)</td>
+        <td style="">12/1999</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#c5da80;">0.7774</td>
+        <td style="background:#f98370;">0.0391</td>
+        <td style="">0.517</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0114</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9773;">0.1553</td>
+        <td style="background:#fa9874;">0.1914</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">output_gap_us_q</td>
+        <td style="">CBO US Real Output Gap (% GDP)</td>
+        <td style="">3/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8716c;">-0.0146</td>
+        <td style="background:#f8756d;">0.0196</td>
+        <td style="">0.082</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0279</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fcbe7b;">0.2836</td>
+        <td style="background:#f98370;">-0.5155</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">gdp_qoq_us_q</td>
+        <td style="">GDP US Chained 2012 Dollars QoQ SA (%)</td>
+        <td style="">3/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786e;">0.0208</td>
+        <td style="background:#f98d71;">0.0536</td>
+        <td style="color:red;">0.001</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0475</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98470;">0.0923</td>
+        <td style="background:#fa8f72;">-0.1077</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">gdp_yoy_us_q</td>
+        <td style="">GDP US Chained 2012 Dollars YoY SA (%)</td>
+        <td style="">3/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786d;">0.0203</td>
+        <td style="background:#f8776d;">0.0215</td>
+        <td style="color:red;">0.023</td>
+        <td style="">no UR</td>
+        <td style="">0.3385</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fdd27f;">0.3505</td>
+        <td style="background:#f98370;">-0.5237</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">output_gap_ez_q</td>
+        <td style="">BBG Euro Area Output Gap (%)</td>
+        <td style="">3/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8726c;">-0.0066</td>
+        <td style="background:#f8756d;">0.0189</td>
+        <td style="color:red;">0.01</td>
+        <td style="">no UR</td>
+        <td style="">0.2647</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8726c;">0.032</td>
+        <td style="background:#f98d72;">-0.1803</td>
+        <td style="color:red;">0.0036</td>
+      </tr>
+      <tr>
+        <td style="">gdp_qoq_ez_q</td>
+        <td style="">GDP EMU Chained 2012 Dollars QoQ SA (%)</td>
+        <td style="">3/1995</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0028</td>
+        <td style="background:#f8756d;">0.0193</td>
+        <td style="color:red;">0.0</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.037</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f97f6f;">0.0753</td>
+        <td style="background:#f98b71;">-0.2706</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">gdp_yoy_ez_q</td>
+        <td style="">GDP EMU Chained 2012 Dollars YoY SA (%)</td>
+        <td style="">12/1995</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0111</td>
+        <td style="background:#f97c6e;">0.0301</td>
+        <td style="color:red;">0.003</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0267</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fbb178;">0.2396</td>
+        <td style="background:#f98a71;">-0.3085</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">unemp_gap_us_q</td>
+        <td style=""></td>
+        <td style="">3/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0094</td>
+        <td style="background:#f8736d;">0.0167</td>
+        <td style="color:red;">0.031</td>
+        <td style="">no UR</td>
+        <td style="">0.1223</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fba676;">0.2037</td>
+        <td style="background:#fba275;">0.5135</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">gdp_us_trail_5y</td>
+        <td style=""></td>
+        <td style="">12/1984</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786e;">0.0215</td>
+        <td style="background:#f86d6b;">0.0073</td>
+        <td style="">0.253</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0242</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8736d;">0.0356</td>
+        <td style="background:#f98470;">-0.4882</td>
+        <td style="color:red;">0.0022</td>
+      </tr>
+      <tr>
+        <td style="">gdp_us_vol_5y</td>
+        <td style=""></td>
+        <td style="">12/1984</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0166</td>
+        <td style="background:#f86e6c;">0.0088</td>
+        <td style="">0.208</td>
+        <td style="">yes UR</td>
+        <td style="">0.1912</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8756d;">0.041</td>
+        <td style="background:#fa9f75;">0.4369</td>
+        <td style="color:red;">0.001</td>
+      </tr>
+      <tr>
+        <td style="">gdp_ez_trail_5y</td>
+        <td style=""></td>
+        <td style="">9/2000</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0128</td>
+        <td style="background:#f86d6b;">0.0077</td>
+        <td style="">0.221</td>
+        <td style="">yes UR</td>
+        <td style="">0.2388</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0027</td>
+        <td style="background:#fa9673;">0.1289</td>
+        <td style="">0.3984</td>
+      </tr>
+      <tr>
+        <td style="">gdp_ez_vol_5y</td>
+        <td style=""></td>
+        <td style="">9/2000</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786e;">0.0205</td>
+        <td style="background:#f8716c;">0.0141</td>
+        <td style="">0.374</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0215</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86c6b;">0.0102</td>
+        <td style="background:#fa9773;">0.1362</td>
+        <td style="">0.1022</td>
+      </tr>
+      <tr>
+        <td style="">spf_fed_gdp_10y_q</td>
+        <td style="">Fed SPF 10Y GDP Growth</td>
+        <td style="">12/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.026</td>
+        <td style="background:#f86a6b;">0.0041</td>
+        <td style="">0.713</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0076</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8696b;">0.0014</td>
+        <td style="background:#fa9874;">0.1725</td>
+        <td style="">0.5478</td>
+      </tr>
+      <tr>
+        <td style="">spf_fed_cpi_5y_q</td>
+        <td style="">Fed SPF 5Y CPI Inflation Rate</td>
+        <td style="">6/2005</td>
+        <td style="">6/2005</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.023</td>
+        <td style="background:#f86a6b;">0.0033</td>
+        <td style="">0.182</td>
+        <td style="">yes UR</td>
+        <td style="">0.2041</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8696b;">0.0</td>
+        <td style="background:#fa9373;">0.0242</td>
+        <td style="">0.954</td>
+      </tr>
+      <tr>
+        <td style="">spf_fed_cpi_10y_q</td>
+        <td style="">Fed SPF 10Y CPI Inflation Rate</td>
+        <td style="">9/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0234</td>
+        <td style="background:#f8696b;">0.0016</td>
+        <td style="">0.118</td>
+        <td style="">no UR</td>
+        <td style="">0.2797</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f87a6e;">0.0568</td>
+        <td style="background:#fee582;">2.8258</td>
+        <td style="color:red;">0.0001</td>
+      </tr>
+      <tr>
+        <td style="">spf_fed_gdp_1y_q</td>
+        <td style=""></td>
+        <td style="">6/1981</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8796e;">0.0267</td>
+        <td style="background:#f86d6b;">0.0077</td>
+        <td style="color:red;">0.004</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0021</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9974;">0.1613</td>
+        <td style="background:#f8766d;">-0.987</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_payroll_disp_q</td>
+        <td style="">Fed SPF Payroll 1y (Dispersion P75 - P25) (%)</td>
+        <td style="">9/2003</td>
+        <td style="">9/2003</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0072</td>
+        <td style="background:#f86c6b;">0.0067</td>
+        <td style="color:red;">0.013</td>
+        <td style="">no UR</td>
+        <td style="">0.238</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8736d;">0.0362</td>
+        <td style="background:#fba376;">0.5545</td>
+        <td style="color:red;">0.0031</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_ip_disp_q</td>
+        <td style="">Fed SPF Industrial Production 1y (Dispersion P75 - P25) (%)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0166</td>
+        <td style="background:#f86c6b;">0.0068</td>
+        <td style="color:red;">0.005</td>
+        <td style="">no UR</td>
+        <td style="">0.2104</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98971;">0.1063</td>
+        <td style="background:#fbad78;">0.9091</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_gdp1y_disp_q</td>
+        <td style="">Fed SPF GDP 1y (Dispersion P75 - P25) (%)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0084</td>
+        <td style="background:#f86a6b;">0.0037</td>
+        <td style="">0.068</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0326</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f9816f;">0.0808</td>
+        <td style="background:#fcbd7b;">1.4419</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_pce_disp_q</td>
+        <td style="">Fed SPF PCE 1y (Dispersion P75 - P25) (%)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0081</td>
+        <td style="background:#f86b6b;">0.0048</td>
+        <td style="color:red;">0.032</td>
+        <td style="">no UR</td>
+        <td style="">0.2044</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8726c;">0.0301</td>
+        <td style="background:#fba776;">0.6922</td>
+        <td style="color:red;">0.0049</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_nonresinv_disp_q</td>
+        <td style="">Fed SPF Non Residential Investment 1y (Dispersion P75 - P25) (%)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f87a6e;">0.0286</td>
+        <td style="background:#f8706c;">0.0115</td>
+        <td style="">0.058</td>
+        <td style="">no UR</td>
+        <td style="">0.2661</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fcc07b;">0.2898</td>
+        <td style="background:#fbac78;">0.8859</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_resinv_disp_q</td>
+        <td style="">Fed SPF Residential Investment 1y (Dispersion P75 - P25) (%)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f9816f;">0.0618</td>
+        <td style="background:#f9816f;">0.036</td>
+        <td style="">0.536</td>
+        <td style="">yes UR</td>
+        <td style="">0.0803</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fdcd7e;">0.3325</td>
+        <td style="background:#fa9b74;">0.3041</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_unemp_disp_q</td>
+        <td style="">Fed SPF Unemployment 1y (Dispersion P75 - P25) (%)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0049</td>
+        <td style="background:#f86b6b;">0.0043</td>
+        <td style="color:red;">0.03</td>
+        <td style="">no UR</td>
+        <td style="">0.2074</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8736c;">0.0338</td>
+        <td style="background:#fbaa77;">0.8095</td>
+        <td style="color:red;">0.0028</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_cpi1y_disp_q</td>
+        <td style="">Fed SPF CPI 1y (Dispersion P75 - P25) (%)</td>
+        <td style="">3/1990</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0067</td>
+        <td style="background:#f8696b;">0.0021</td>
+        <td style="">0.262</td>
+        <td style="">yes UR</td>
+        <td style="">0.0737</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fbab77;">0.2209</td>
+        <td style="background:#d0dd81;">4.3456</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">fed_spf_cpi10y_disp_q</td>
+        <td style="">Fed SPF CPI 10y (Dispersion P75 - P25) (%)</td>
+        <td style="">9/1991</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0044</td>
+        <td style="background:#f8696b;">0.0014</td>
+        <td style="">0.274</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.014</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fcc07b;">0.2899</td>
+        <td style="background:#63be7b;">7.4515</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_hcpi1y_median_q</td>
+        <td style="">ECB SPF HCPI 1y Median (%)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0167</td>
+        <td style="background:#f86b6b;">0.0054</td>
+        <td style="">0.34</td>
+        <td style="">yes UR</td>
+        <td style="">0.2402</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86a6b;">0.0044</td>
+        <td style="background:#fa9974;">0.2311</td>
+        <td style="">0.2855</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_hcpi2y_median_q</td>
+        <td style="">ECB SPF HCPI 2y Median (%)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0172</td>
+        <td style="background:#f8696b;">0.0021</td>
+        <td style="">0.441</td>
+        <td style="">yes UR</td>
+        <td style="">0.2208</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8736d;">0.036</td>
+        <td style="background:#fdc67c;">1.7531</td>
+        <td style="color:red;">0.0021</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_gdp1y_median_q</td>
+        <td style="">ECB SPF GDP 1y Median (%)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8776d;">0.0148</td>
+        <td style="background:#f8736d;">0.0169</td>
+        <td style="color:red;">0.013</td>
+        <td style="">no UR</td>
+        <td style="">0.1577</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fba476;">0.1991</td>
+        <td style="background:#f98470;">-0.5024</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_gdp2y_median_q</td>
+        <td style="">ECB SPF GDP 2y Median (%)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786d;">0.018</td>
+        <td style="background:#f86b6b;">0.0044</td>
+        <td style="color:red;">0.013</td>
+        <td style="">no UR</td>
+        <td style="">0.0584</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98a71;">0.1098</td>
+        <td style="background:#f8696b;">-1.4226</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_unemp1y_median_q</td>
+        <td style="">ECB SPF Unemployment 1y Median (%)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f98670;">0.0862</td>
+        <td style="background:#f8716c;">0.0142</td>
+        <td style="">0.501</td>
+        <td style="">yes UR</td>
+        <td style="">0.245</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86b6b;">0.007</td>
+        <td style="background:#fa9673;">0.1119</td>
+        <td style="">0.1765</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_unemp2y_median_q</td>
+        <td style="">ECB SPF Unemployment 2y Median (%)</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f98670;">0.0836</td>
+        <td style="background:#f8716c;">0.0135</td>
+        <td style="">0.482</td>
+        <td style="">yes UR</td>
+        <td style="">0.2453</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86e6c;">0.0182</td>
+        <td style="background:#fa9874;">0.1893</td>
+        <td style="color:red;">0.0291</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_hcpi1y_disp_q</td>
+        <td style="">ECB SPF HCPI 1y Dispersion</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0038</td>
+        <td style="background:#f8696b;">0.0024</td>
+        <td style="color:red;">0.018</td>
+        <td style="">no UR</td>
+        <td style="">0.1848</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f98370;">0.0892</td>
+        <td style="background:#fdd880;">2.3595</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_hcpi2y_disp_q</td>
+        <td style="">ECB SPF HCPI 2y Dispersion</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0031</td>
+        <td style="background:#f8696b;">0.0013</td>
+        <td style="color:red;">0.012</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0106</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86e6c;">0.0186</td>
+        <td style="background:#fdcb7d;">1.9348</td>
+        <td style="color:red;">0.0272</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_gdp1y_disp_q</td>
+        <td style="">ECB SPF GDP 1y Dispersion</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0053</td>
+        <td style="background:#f86b6b;">0.0051</td>
+        <td style="color:red;">0.008</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0402</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8766d;">0.0439</td>
+        <td style="background:#fbaa77;">0.7876</td>
+        <td style="color:red;">0.0006</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_gdp2y_disp_q</td>
+        <td style="">ECB SPF GDP 2y Dispersion</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0043</td>
+        <td style="background:#f8696b;">0.0026</td>
+        <td style="color:red;">0.02</td>
+        <td style="">no UR</td>
+        <td style="">0.2283</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f8716c;">0.0279</td>
+        <td style="background:#fcb77a;">1.2353</td>
+        <td style="color:red;">0.0068</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_unemp1y_disp_q</td>
+        <td style="">ECB SPF Unemployment 1y Dispersion</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8746d;">0.0036</td>
+        <td style="background:#f8696b;">0.0021</td>
+        <td style="color:red;">0.003</td>
+        <td style="">no UR</td>
+        <td style="">0.0993</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9072;">0.1312</td>
+        <td style="background:#f3e783;">3.3215</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">ecb_spf_unemp2y_disp_q</td>
+        <td style="">ECB SPF Unemployment 2y Dispersion</td>
+        <td style="">12/1998</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8756d;">0.0049</td>
+        <td style="background:#f8696b;">0.0021</td>
+        <td style="color:red;">0.003</td>
+        <td style="">no UR</td>
+        <td style="">0.0671</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fcc37c;">0.3015</td>
+        <td style="background:#b8d67f;">5.0078</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">corp_fin_gap_3M_gdp_q</td>
+        <td style="">Corporate Financing Gap (% GDP) (Smoothed)</td>
+        <td style="">12/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8726c;">-0.0083</td>
+        <td style="background:#f86f6c;">0.0107</td>
+        <td style="">0.079</td>
+        <td style="">no UR</td>
+        <td style="">0.0785</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9473;">0.1438</td>
+        <td style="background:#f97f6f;">-0.6731</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">corp_fin_gap_12M_gdp_q</td>
+        <td style="">Corporate Financing Gap (12M) (% GDP) (Smoothed)</td>
+        <td style="">12/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8726c;">-0.0078</td>
+        <td style="background:#f86e6c;">0.0089</td>
+        <td style="">0.109</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0247</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8756d;">0.0425</td>
+        <td style="background:#f98670;">-0.4392</td>
+        <td style="color:red;">0.0008</td>
+      </tr>
+      <tr>
+        <td style="">corp_fin_gap_3M_jpm_gdp_q</td>
+        <td style="">Corporate Financing Gap JPM (% GDP) (Smoothed)</td>
+        <td style="">12/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8726c;">-0.0078</td>
+        <td style="background:#f8716c;">0.0133</td>
+        <td style="">0.101</td>
+        <td style="">no UR</td>
+        <td style="color:red;">0.0371</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98570;">0.0948</td>
+        <td style="background:#f98670;">-0.4403</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">corp_fin_gap_12M_jpm_gdp_q</td>
+        <td style=""></td>
+        <td style="">12/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8726c;">-0.0074</td>
+        <td style="background:#f86e6c;">0.0096</td>
+        <td style="">0.165</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0261</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8756d;">0.0428</td>
+        <td style="background:#f98770;">-0.4112</td>
+        <td style="color:red;">0.0008</td>
+      </tr>
+      <tr>
+        <td style="">hh_debt_gdp_us_q</td>
+        <td style="">Household Debt US (% GDP)</td>
+        <td style="">12/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f1e683;">0.608</td>
+        <td style="background:#f98670;">0.0441</td>
+        <td style="">0.598</td>
+        <td style="">yes UR</td>
+        <td style="">0.1548</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa9373;">0.141</td>
+        <td style="background:#fa9773;">0.1616</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">hh_debt_disp_inc_us_q</td>
+        <td style="">Household Debt US (% Disposable Income)</td>
+        <td style="">3/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#cedd81;">0.7422</td>
+        <td style="background:#fa9172;">0.0595</td>
+        <td style="">0.795</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0216</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9172;">0.1334</td>
+        <td style="background:#fa9673;">0.1166</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">priv_debt_gdp_us_q</td>
+        <td style="">Private Debt US (% GDP)</td>
+        <td style="">12/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#b6d67f;">0.836</td>
+        <td style="background:#f87b6e;">0.0274</td>
+        <td style="">0.384</td>
+        <td style="">yes UR</td>
+        <td style="">0.1642</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#fa9a74;">0.163</td>
+        <td style="background:#fa9b74;">0.2799</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">corp_debt_gdp_us_q</td>
+        <td style="">Corporate Debt US (% GDP)</td>
+        <td style="">12/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#fdc67d;">0.3845</td>
+        <td style="background:#f87a6e;">0.0267</td>
+        <td style="">0.741</td>
+        <td style="">yes UR</td>
+        <td style="">0.2524</td>
+        <td style="">no stat. resid</td>
+        <td style="background:#f86d6b;">0.0149</td>
+        <td style="background:#fa9072;">-0.0869</td>
+        <td style="color:red;">0.0484</td>
+      </tr>
+      <tr>
+        <td style="">public_debt_gdp_us_q</td>
+        <td style="">Public Debt US (% GDP)</td>
+        <td style="">12/1980</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#ece582;">0.6261</td>
+        <td style="background:#fcbb7a;">0.1198</td>
+        <td style="">0.651</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0334</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f8726c;">0.0309</td>
+        <td style="background:#fa9272;">-0.0279</td>
+        <td style="color:red;">0.0043</td>
+      </tr>
+      <tr>
+        <td style="">public_inmkt_debt_gdp_us_q</td>
+        <td style="">Public Debt in the Market US (% GDP)</td>
+        <td style="">9/2002</td>
+        <td style="">9/2002</td>
+        <td style="">8/2023</td>
+        <td style="background:#f9e983;">0.577</td>
+        <td style="background:#fba977;">0.0937</td>
+        <td style="">0.46</td>
+        <td style="">yes UR</td>
+        <td style="color:red;">0.0455</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f86d6b;">0.015</td>
+        <td style="background:#fa9272;">-0.0252</td>
+        <td style="">0.0519</td>
+      </tr>
+      <tr>
+        <td style="">em_cc_usgdp</td>
+        <td style=""></td>
+        <td style="">9/1995</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8766d;">0.0116</td>
+        <td style="background:#f86c6b;">0.0065</td>
+        <td style="">0.324</td>
+        <td style="">yes UR</td>
+        <td style="">0.1093</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#fa9773;">0.1533</td>
+        <td style="background:#fcb479;">1.1435</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+      <tr>
+        <td style="">em_cc_ezgdp</td>
+        <td style=""></td>
+        <td style="">9/1995</td>
+        <td style="">11/2001</td>
+        <td style="">8/2023</td>
+        <td style="background:#f8786d;">0.019</td>
+        <td style="background:#f86f6c;">0.0106</td>
+        <td style="">0.328</td>
+        <td style="">yes UR</td>
+        <td style="">0.1232</td>
+        <td style="">yes stat. resid</td>
+        <td style="background:#f98971;">0.108</td>
+        <td style="background:#fba476;">0.5911</td>
+        <td style="color:red;">0.0</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+
