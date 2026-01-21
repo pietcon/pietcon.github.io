@@ -18,3 +18,9 @@ vendor/
 
 # Ignore folders related to IDEs
 .vscode/
+
+# Exclude ALL Python files
+*.py
+
+# Exclude ALL Excel files
+*.xlsx
