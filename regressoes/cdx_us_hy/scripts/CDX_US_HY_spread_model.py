@@ -1,98 +1,73 @@
 import os, sys, warnings, re
 import pandas as pd
 from datetime import datetime as dt
-from p_functions import reg_box_jenkins, table_stats
+#from p_functions import reg_box_jenkins, table_stats
 from sklearn.linear_model import LinearRegression
 import logging
 
-# ──────────────────────────────
-# 1. Logging básico (console + arquivo)
-# ──────────────────────────────
+from pathlib import Path
+parent_path = Path(__file__).parent.parent.parent
+
+sys.path.append(str(parent_path))
+from p_functions import reg_box_jenkins, table_stats
+
+# ──────────────────────────────────
+# 1. Basic Logging (console + files)
+# ──────────────────────────────────
 logging.basicConfig(
-    level=logging.INFO,  # DEBUG para rastrear variável a variável
+    level=logging.INFO, # DEBUG to trace variables one-by-one
     format="%(asctime)s [%(levelname)s] %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
     handlers=[
-        logging.StreamHandler(sys.stdout),               # console
+        logging.StreamHandler(sys.stdout),  # console
         logging.FileHandler("run.log", mode="w", encoding="utf-8")
     ]
 )
 log = logging.getLogger(__name__)
 
-# ──────────────────────────────
-# 2. Paths do projeto
-# ──────────────────────────────
-path_in        = os.path.join('regressoes', '0inputs\\')
-path_out       = os.path.join('regressoes', 'cdx_us_hy', 'outputs\\')
-#path_scripts   = os.path.join('regressoes', 'cdx_us_hy', 'scripts')
-#sys.path.append(path_scripts)
+# ──────────────────────────────────
+# 2. Project Paths
+# ──────────────────────────────────
+path_in         = os.path.join(parent_path, '0inputs\\')
+path_out        = os.path.join(parent_path, 'cdx_us_hy', 'outputs\\')
+file_data_m     = os.path.join(path_in, 'out_DB_M.xlsx')    # monthly
+file_data_d     = os.path.join(path_in, 'out_DB_D.xlsx')    # daily
+file_legendas   = os.path.join(path_in, 'legendas.xlsx')    # legends
 
-#base_dir       = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#path_data_base = os.path.join(base_dir, 'excel', 'in')
-
-file_data_m   = os.path.join(path_in, 'out_DB_M.xlsx')    # mensal
-file_data_d   = os.path.join(path_in, 'out_DB_D.xlsx')    # diário
-file_legendas = os.path.join(path_in, 'legendas.xlsx')    # legendas
-
-# ────────────log───────────────
+# ────────────Logs──────────────────
 for f in (file_data_m, file_data_d, file_legendas):
     if not os.path.exists(f):
         log.critical("Arquivo %s não encontrado", f)
         sys.exit(1)
-# ──────────────────────────────        
+# ──────────────────────────────────
         
-# ──────────────────────────────
+# ──────────────────────────────────
 # 3. Warnings & pandas opts
-# ──────────────────────────────
+# ──────────────────────────────────
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 pd.set_option('mode.chained_assignment', None)
 
 start_load = dt.now()
 
-# ──────────────────────────────
-# 4. Parâmetros gerais
-# ──────────────────────────────
-index          = 'CDX_US_HY_spread'
-last_datapoint = '2023-11-01'
+# ──────────────────────────────────
+# 4. Parameters
+# ──────────────────────────────────
+#adjust_first_datapoint  = False
+#full_run_OoS    = True
+index           = 'CDX_US_HY_spread'
+last_datapoint  = '2023-11-01'
+daily_model     = False     # estimate the model on daily frequence instead of monthly
+main_setup      = True      
 
-#### PARÂMETROS
-main_setup = True
-version_trunch = 1; force_regs = [0,1,2,3,4,5,6,7,8,9]
-full_run_OoS = True
-daily_model = False
+if not main_setup: 
+    version_trunch  = 1
+    force_regs      = [0,1,2,3,4,5,6,7,8,9]
 
-#### OUTROS
-vint_robust_test = 3
-reccursive_reg = True; plot_Xs = True
-d_intercept = True; adjust_first_datapoint = False
+vint_robust_test        = 3                 # replicate the same reg spec for the X last vintages
+reccursive_reg, d_intercept = True, True    # secondary main function parameters, keep both True
 
-# ──────────────────────────────
-# 5. Carregamento de dados
-# ──────────────────────────────
-if daily_model:
-    first_datapoint = '2007-01-01'
-    reccursive_length = 3000
-    step_oos = 30
-    df = pd.read_excel(file_data_d, index_col=0)  # Dados diários
-else:
-    first_datapoint = '2001-11-01'
-    reccursive_length = 160
-    step_oos = 1
-    df = pd.read_excel(file_data_m, index_col=0)  # Dados mensais
-    
-df_daily = pd.read_excel(file_data_d, index_col=0)  # sempre
-
-dff_cods = pd.read_excel(file_legendas, usecols=['Codes', 'Names']).dropna()
-dff_cods.columns = ['cod', 'name_paste']
-
-keep_cols = [x for x in df.columns if x != 0]
-df = df[keep_cols]
-df_daily = df_daily[keep_cols]
-
-
-###########
-# Adjusting paths
+# ───────────Paths──────────────────
 if not main_setup: 
     path_out += 'v_' + str(version_trunch) + '\\'
     reg_versions = [int(re.sub('t_', '', x)) for x in os.listdir(path_out) if x[:2] == 't_']
@@ -100,50 +75,70 @@ if not main_setup:
 else:
     reg_versions = [0]
     version_trunch = 0
-###########
+# ──────────────────────────────────
 
-###########
-# Defining explanatory variables
+# ──────────────────────────────────
+# 5. Loading the data
+# ──────────────────────────────────
+if daily_model:
+    first_datapoint     = '2007-01-01'
+    reccursive_length   = 3000
+    step_oos            = 30
+    df = pd.read_excel(file_data_d, index_col=0)  # Daily data
+else:
+    first_datapoint     = '2001-11-01'
+    reccursive_length   = 160
+    step_oos            = 1
+    df = pd.read_excel(file_data_m, index_col=0)  # Monthly data
+    
+df_daily = pd.read_excel(file_data_d, index_col=0)
+
+dff_cods = pd.read_excel(file_legendas, usecols=['Codes', 'Names']).dropna()
+dff_cods.columns = ['cod', 'name_paste']
+
+keep_cols   = [x for x in df.columns if x != 0]
+df          = df[keep_cols]
+df_daily    = df_daily[keep_cols]
+
+# ────Explanatory Variables─────────
 vars_X = [x for x in df.columns if x != index]
 vars_y = [x for x in df.columns if x not in vars_X]
+# ──────────────────────────────────
 
+# ────────Start Timming─────────────
 load_time = dt.now() - start_load
 mins = int(load_time.total_seconds() // 60)
 secs = int(load_time.total_seconds() % 60)
 delta_time = f'{mins} min {secs} sec'
 print('Load Time: ', delta_time)
+# ──────────────────────────────────
 
-# ──────────────────────────────
-# 6. Loop de versões
-# ──────────────────────────────
+# ──────────────────────────────────
+# 6. Version Loop
+# ──────────────────────────────────
 for rv in reg_versions:
-    path_vint = os.path.join(path_out, f't_{rv}')
-    path_recc = os.path.join(path_vint, 'reccursive')
-    path_coefs = os.path.join(path_recc, 'coefs')
+    # ───────────Paths──────────────────
+    path_vint   = os.path.join(path_out, f't_{rv}')
+    path_recc   = os.path.join(path_vint, 'reccursive')
+    path_coefs  = os.path.join(path_recc, 'coefs')
     os.makedirs(path_coefs, exist_ok=True)
-
-    out_recc_proj_is = pd.DataFrame()
-    out_recc_proj_oos = pd.DataFrame()
-    recc_proj_coef_oos_stats = pd.DataFrame()
-
-    ###########
-    # Uploading fix specifications
-    # ! to check what changed from the last time we ran the model, 
-    # ! just copy the last fixed_specs into the new folder 
-    # ! and run the model again with this specification
-    
-    file_specs = os.path.join('regressoes', 'cdx_us_hy', 'specs_fixed.xlsx')
+    # ───────────Outputs────────────────
+    out_recc_proj_is            = pd.DataFrame()
+    out_recc_proj_oos           = pd.DataFrame()
+    recc_proj_coef_oos_stats    = pd.DataFrame()
+    out = {}; out_stats = {}
+    out_y = {}; fixed_spec = {}
+    out_stats_vint = {}; out_robust_k_targ = {}
+    # ────────Specifications────────────
+    file_specs = os.path.join(parent_path, 'cdx_us_hy', 'specs_fixed.xlsx')
     print("🔍 Procurando arquivo em:", file_specs)
-
+    # ─────────────Data─────────────────
     if os.path.exists(file_specs):
         df_specs = pd.read_excel(file_specs, sheet_name='Sheet1', index_col=0)
     else:
         print('No fixed specification defined yet. Run Dynamic Selection first.')
         raise SystemExit
-    ###########
-
-    out = {}; out_stats = {}; out_y = {}; fixed_spec = {}
-    out_stats_vint = {}; out_robust_k_targ = {}
+    # ──────────────────────────────────
 
     # Defining how many times wil will repeat the dependent variable to run multiple specifications
     sectors = [index]
@@ -156,7 +151,7 @@ for rv in reg_versions:
     ##################
 
     for sec in sectors:
-        # Create folder for each sector
+        # ───────Sector Folder───────────────
         path_sec = os.path.join(path_vint, sec)
         os.makedirs(path_sec, exist_ok=True)
 
@@ -183,8 +178,6 @@ for rv in reg_versions:
         if missing_vars:
             print("🚨 Variáveis da especificação não encontradas nos dados:")
             print(missing_vars)
-            #print([col for col in df.columns if 'sloos' in col.lower()])
-
             raise SystemExit
 
         # ! check if variables names have changed, if so, rerun dynamic selection will be needed
@@ -195,30 +188,30 @@ for rv in reg_versions:
         X_est = X_adj[spec_used].copy(); X_proj_est = X_proj[spec_used]
         dff_reg = pd.concat([y_adj, pd.concat([X_est, X_proj_est])], axis=1)
 
-        ##### START TIMER
+        # ──────────Start Report────────────
         start = dt.now()
-        ##### RUNNING REPORT
-        out_start_time = start.strftime('%d%b%Y - %H:%M:%S')
+        out_start_time      = start.strftime('%d%b%Y - %H:%M:%S')
         out_first_datapoint = dt.strptime(first_datapoint, '%Y-%m-%d').strftime('%d%b%Y')
-        out_last_datapoint = dt.strptime(last_datapoint, '%Y-%m-%d').strftime('%d%b%Y')       
+        out_last_datapoint  = dt.strptime(last_datapoint, '%Y-%m-%d').strftime('%d%b%Y')       
         print('')
         print('START   Y Var: ', sec, '- vers: ', str(version_trunch), '- regs: ', str(rv))
         print('# Start:  ', out_start_time, '    ||   Sample: ', out_first_datapoint, '-', out_last_datapoint)
         print('# N Obs:', y.shape[0], '- Fit:', X.shape[0], '- Pred:', X_proj.shape[0], '  ||   X Var Init:', X.shape[1], '- Spec: ', len(spec_used), '      ...running...') 
+        # ──────────────────────────────────
 
         for v in range(vint_robust_test):
             dff_reg_run = dff_reg.copy()
-            if v == 0:           
-                reg = reg_box_jenkins(dff_reg_run, name=sec, path=path_vint, intercept=d_intercept, 
-                                        plot_Xs=plot_Xs, rec_bol=reccursive_reg)
-                # Saving the contemporaneous regression results ONLY
+            if v == 0:
+                reg = reg_box_jenkins(dff_reg_run, name=sec, path=path_vint)
+
+                # ──────────Contemp. Regs───────────
                 out_stats[var_y] = reg[1]
-                out[var_y + '_proj'] = reg[0][1]
+                out[var_y + '_proj'] = reg[0].iloc[1]
                 out_y[var_y] = dff_reg[var_y_fix]
                 out_stats_vint['t_' + str(v)] = reg[1]
 
-                # Out of Sample reccursion
-                if full_run_OoS or main_setup:
+                # ─────────OoS Reccursion───────────
+                if main_setup: #full_run_OoS or 
                     recc_proj = pd.DataFrame()
                     recc_proj_coef = pd.DataFrame()
 
@@ -239,7 +232,6 @@ for rv in reg_versions:
                     recc_proj_coef.sort_index(ascending=True, inplace=True)
                     recc_proj_coef.to_excel(os.path.join(path_coefs, f'out_recc_coefs_{re.sub(index, "", sec)}.xlsx'))
 
-
                     # Saving OoS projections
                     first_date = recc_proj_coef.index[0]
                     cols_proj = [col for col in recc_proj_coef.columns if col in df_daily.columns]
@@ -249,7 +241,7 @@ for rv in reg_versions:
                     df_daily_proj = df_daily_proj[(df_daily_proj.index >= first_date)]
                     expand_index = pd.DataFrame(index = df_daily_proj.index)
                     recc_proj_coef_proj = recc_proj_coef.merge(expand_index, how='outer', left_index=True, right_index=True)
-                    recc_proj_coef_proj.fillna(method='ffill', inplace=True)
+                    recc_proj_coef_proj.ffill(inplace=True)
                     out = (recc_proj_coef_proj*df_daily_proj).sum(axis=1)
                     out_recc_proj_oos[sec] = out.loc[~(out==0)]
 
@@ -264,40 +256,38 @@ for rv in reg_versions:
             else:
                 dff_reg_run.dropna(inplace=True)
                 dff_reg_run = dff_reg_run.iloc[:-v]
-                reg = reg_box_jenkins(dff_reg_run, name=sec, intercept=d_intercept)
+                reg = reg_box_jenkins(dff_reg_run, name=sec)
                 out_stats_vint['t_' + str(v)] = reg[1]
 
         pd.DataFrame.from_dict(out_stats_vint).to_excel(os.path.join(path_sec, 'vintages_regs_summary.xlsx'))
 
-        ##### END TIMER
+        # ──────────print report────────────
         t_elap = dt.now() - start
         mins = int(t_elap.total_seconds() // 60)
         secs = int(t_elap.total_seconds() % 60)
         delta_time = f'{mins} min {secs} sec'
-        ##### RUNNING REPORT
         print('# Run time: ', delta_time)
         print('END     Y Var: ', sec, '- vers: ', str(version_trunch), '- regs: ', str(rv))
+        # ──────────────────────────────────
 
-        if full_run_OoS or main_setup: 
+        if main_setup: #full_run_OoS or 
             out_recc_proj_is = pd.concat([out_recc_proj_is, recc_proj], axis=1)
 
     # Saving Testing Output
-    fixed_spec = pd.DataFrame.from_dict(fixed_spec, orient='index').transpose()
-    pd.DataFrame.from_dict(out).to_excel(os.path.join(path_vint, 'sectors_proj.xlsx'))
-
-    pd.DataFrame.from_dict(out_y).to_excel(os.path.join(path_vint, 'sectors_actual.xlsx'))
-    X.to_excel(os.path.join(path_vint, 'varsX_actual.xlsx'))
-    out_sum = table_stats(pd.DataFrame.from_dict(out_stats))#, df_cods=dff_cods) 
-    out_sum.to_excel(os.path.join(path_vint, 'sectors_regs_summary.xlsx'))
-
-    # Saving Final Output
-    if main_setup or full_run_OoS:
-        recc_proj_coef_oos_stats.to_excel(os.path.join(path_recc, 'out_main_proj_reccursive_oos_signal_flip.xlsx'))
-        out_recc_proj_oos.to_excel(os.path.join(path_recc, 'out_main_proj_reccursive_oos.xlsx'))
+    fixed_spec  = pd.DataFrame.from_dict(fixed_spec, orient='index').transpose()
+    out_sum     = table_stats(pd.DataFrame.from_dict(out_stats))
+    
+    if main_setup: #full_run_OoS or 
+        out_path = path_recc
+        recc_proj_coef_oos_stats.to_excel(os.path.join(out_path, 'out_main_proj_reccursive_oos_signal_flip.xlsx'))
+        out_recc_proj_oos.to_excel(os.path.join(out_path, 'out_main_proj_reccursive_oos.xlsx'))
         out_recc_proj_is.columns = out_recc_proj_oos.columns
-        out_recc_proj_is.to_excel(os.path.join(path_recc, 'out_main_proj_reccursive_is.xlsx'))
-        pd.DataFrame.from_dict(out).to_excel(os.path.join(path_recc, 'sectors_proj.xlsx'))
-        pd.DataFrame.from_dict(out_y).to_excel(os.path.join(path_recc, 'sectors_actual.xlsx'))
-        X.to_excel(os.path.join(path_recc, 'varsX_actual.xlsx'))
-        out_sum.to_excel(os.path.join(path_recc, 'sectors_regs_summary.xlsx'))
+        out_recc_proj_is.to_excel(os.path.join(out_path, 'out_main_proj_reccursive_is.xlsx'))
+    else:
+        out_path = path_vint
+
+    pd.DataFrame.from_dict(out).to_excel(os.path.join(out_path, 'sectors_proj.xlsx'))
+    pd.DataFrame.from_dict(out_y).to_excel(os.path.join(out_path, 'sectors_actual.xlsx'))
+    X.to_excel(os.path.join(out_path, 'varsX_actual.xlsx'))
+    out_sum.to_excel(os.path.join(out_path, 'sectors_regs_summary.xlsx'))
 

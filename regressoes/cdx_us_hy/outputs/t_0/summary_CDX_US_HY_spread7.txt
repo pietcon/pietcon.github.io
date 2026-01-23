@@ -6,8 +6,8 @@
    Dep. Variable: CDX_US_HY_spread   R-squared:             0.790
            Model:              OLS   Adj. R-squared:        0.787
           Method:    Least Squares   F-statistic:           243.8
-            Date: Tue, 05 Aug 2025   Prob (F-statistic): 1.60e-86
-            Time:         16:14:36   Log-Likelihood:       879.34
+            Date: Thu, 22 Jan 2026   Prob (F-statistic): 1.60e-86
+            Time:         14:00:34   Log-Likelihood:       879.34
 No. Observations:              264   AIC:                  -1749.
     Df Residuals:              259   BIC:                  -1731.
         Df Model:                4                               
